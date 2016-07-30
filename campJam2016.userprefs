@@ -1,0 +1,15 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\enemySpawner.cs">
+    <Files>
+      <File FileName="Assets\Scripts\enemySpawner.cs" Line="28" Column="68" />
+      <File FileName="..\DietNinja\Assets\FoodSpawner.cs" Line="50" Column="53" />
+      <File FileName="Assets\Scripts\Movements.cs" Line="15" Column="34" />
+      <File FileName="Assets\Scripts\enemyMovement.cs" Line="15" Column="86" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
