@@ -8,9 +8,8 @@ public class Powerup : MonoBehaviour {
 		if (other.tag == "Player") {
 
 			if (gameObject.tag == "Nyan") {
-
-				Debug.Log ("nois");
 				other.gameObject.GetComponent<PlayerHealth> ().setInvincible ();
+
 			}
 			Destroy (gameObject);
 		}
