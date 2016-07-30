@@ -19,11 +19,18 @@ public class PlayerHealth : MonoBehaviour {
 		if (other.tag == "Enemy"){
 			Destroy (other.gameObject);
 
-			if (invincible == false) {
+			if (invincible == false) 
+			{
 				Destroy (gameObject);
 				SceneManager.LoadScene ("main");
+				if(other.tag == "EnemyShot")
+				{
+					Destroy (gameObject);
+					SceneManager.LoadScene ("main");
+				}
 			}
 		}
+
 	}
 		
 	//Invincibility

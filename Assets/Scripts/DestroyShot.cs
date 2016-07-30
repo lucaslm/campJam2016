@@ -16,10 +16,10 @@ public class DestroyShot : MonoBehaviour {
 	//When collided.
 	void OnTriggerEnter2D(Collider2D other){
 		
-		if (other.tag == "Enemy") {
+		if (other.tag == "Enemy" || other.tag == "EnemyShooter") {
 			Destroy (gameObject);
-			Destroy (other.gameObject);
-			scoreTF.text = (int.Parse(scoreTF.text) + 1).ToString();
+			//Destroy (other.gameObject);
+			//scoreTF.text = (int.Parse(scoreTF.text) + 1).ToString();
 		}
 	}
 

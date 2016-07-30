@@ -17,7 +17,7 @@ public class Shoot : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (!cantshoot) {
-			if (Input.GetKey (KeyCode.Space)) {
+			if (Input.GetKeyDown (KeyCode.Space)) {
 				Instantiate (shot, transform.position, Quaternion.identity);
 				time = 0;
 				cantshoot = true;

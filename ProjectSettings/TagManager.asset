@@ -7,6 +7,10 @@ TagManager:
   - Enemy
   - Nyan
   - Star
+  - PlayerShot
+  - EnemyShot
+  - EnemyShooter
+  - EnemyMov
   layers:
   - Default
   - TransparentFX
