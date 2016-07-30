@@ -48,6 +48,8 @@
      <Compile Include="Assets\Scripts\Destroy.cs" />
      <Compile Include="Assets\Scripts\DestroyShot.cs" />
      <Compile Include="Assets\Scripts\Movements.cs" />
+     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
+     <Compile Include="Assets\Scripts\Powerup.cs" />
      <Compile Include="Assets\Scripts\Shoot.cs" />
      <Compile Include="Assets\Scripts\SpawnItems.cs" />
      <Compile Include="Assets\Scripts\enemyMovement.cs" />

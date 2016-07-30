@@ -7,11 +7,11 @@ public class DestroyShot : MonoBehaviour {
 	float time;
 
 	//When collided.
-	void OnTriggerEnter2D(Collider2D coll){
+	void OnTriggerEnter2D(Collider2D other){
 		
-		if(coll.name == "asteroid Prefab(Clone)"){
+		if(other.tag == "Enemy"){
 			Destroy (gameObject);
-			Destroy (GameObject.FindGameObjectWithTag ("Enemy"));
+			Destroy (other.gameObject);
 		}
 	}
 
