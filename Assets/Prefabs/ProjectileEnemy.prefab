@@ -22,8 +22,8 @@ GameObject:
   - 212: {fileID: 212000011028316834}
   - 61: {fileID: 61000014262092864}
   - 50: {fileID: 50000010158113494}
-  - 114: {fileID: 114000013143302120}
   - 114: {fileID: 114000010133993300}
+  - 114: {fileID: 114000011657941838}
   m_Layer: 0
   m_Name: ProjectileEnemy
   m_TagString: PlayerShot
@@ -87,7 +87,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fail: 5
---- !u!114 &114000013143302120
+--- !u!114 &114000011657941838
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -95,10 +95,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000013324434584}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba5440a0263792a4195422f394ac8f62, type: 3}
+  m_Script: {fileID: 11500000, guid: 4ea9426d38471034eacb4953e8f77b79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceleration: 2000
+  acceleration: 0
 --- !u!212 &212000011028316834
 SpriteRenderer:
   m_ObjectHideFlags: 1

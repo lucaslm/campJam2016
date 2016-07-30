@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.SceneManagement;
 
@@ -8,29 +9,27 @@ public class PlayerHealth : MonoBehaviour {
 	public bool invincible = false;
 	public float duration=5.0f;
 	float time;
+	Text scoreTF;
 
 	void Start() {
 		// Set a reference to the player's animations controller
 		anim = GetComponent<Animator>();
+		scoreTF = GameObject.Find ("ScoreLabel").GetComponents<Text> () [0];
 	}
 
 	void OnTriggerEnter2D (Collider2D other)
 	{
-		if (other.tag == "Enemy"){
+		if (other.tag == "Enemy" || other.tag == "EnemyShooter" || other.tag == "EnemyShot"){
 			Destroy (other.gameObject);
 
-			if (invincible == false) 
-			{
+			if (invincible == false) {
 				Destroy (gameObject);
 				SceneManager.LoadScene ("main");
-				if(other.tag == "EnemyShot")
-				{
-					Destroy (gameObject);
-					SceneManager.LoadScene ("main");
-				}
+			} 
+			else {
+				scoreTF.text = (int.Parse (scoreTF.text) + 1).ToString ();
 			}
 		}
-
 	}
 		
 	//Invincibility

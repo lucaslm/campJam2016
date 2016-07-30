@@ -1,14 +1,15 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class EnemyHealth : MonoBehaviour {
 	int healthShooter, healthStatic, healthMov;
 	public bool itsShooter, itsStatic, itsMov;
-
+	Text scoreTF;
 
 	// Use this for initialization
 	void Start () {
-	
+		scoreTF = GameObject.Find ("ScoreLabel").GetComponents<Text> () [0];
 	}
 	void Awake(){
 		healthStatic = 5;
@@ -23,18 +24,20 @@ public class EnemyHealth : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D coll)
 	{
-		if(coll.tag == "player")
+	//	if(coll.tag == "Player")
+	//	{
+	//		Destroy (coll.gameObject);
+	//  }else 
+		if(coll.tag == "PlayerShot")
 		{
-			Destroy (gameObject);
-
-		}else if(coll.tag == "PlayerShot")
-		{
-			print ("é tiroo");
+			//print ("é tiroo");
 			if(itsShooter)
 			{
+				healthShooter--;
 				if(healthShooter <= 0)
 				{
 					Destroy (gameObject);
+					scoreTF.text = (int.Parse (scoreTF.text) + 3).ToString ();
 				}
 			}
 			if(itsMov)
@@ -45,6 +48,7 @@ public class EnemyHealth : MonoBehaviour {
 				if(healthMov <=0)
 				{
 					Destroy (gameObject);
+					scoreTF.text = (int.Parse (scoreTF.text) + 2).ToString ();
 				}
 			}
 			if(itsStatic)
@@ -55,6 +59,8 @@ public class EnemyHealth : MonoBehaviour {
 				{
 					print ("menos 0");
 					Destroy (gameObject);
+					scoreTF.text = (int.Parse (scoreTF.text) + 1).ToString ();
+
 				}
 			}
 

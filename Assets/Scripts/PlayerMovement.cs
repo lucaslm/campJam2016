@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Movements : MonoBehaviour {
+public class PlayerMovement : MonoBehaviour {
 	Vector3 playerPos, telaPos;
 	public float aceleracao;
 

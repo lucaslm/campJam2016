@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class scroll : MonoBehaviour {
+public class Backscroll : MonoBehaviour {
 
 	public float speed = 0.5f;
 
