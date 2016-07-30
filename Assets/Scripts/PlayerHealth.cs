@@ -4,9 +4,15 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour {
 
+	Animator anim;
 	public bool invincible = false;
 	public float duration=5.0f;
 	float time;
+
+	void Start() {
+		// Set a reference to the player's animations controller
+		anim = GetComponent<Animator>();
+	}
 
 	void OnTriggerEnter2D (Collider2D other)
 	{
@@ -22,7 +28,9 @@ public class PlayerHealth : MonoBehaviour {
 		
 	//Invincibility
 	public void setInvincible(){
+		
 		invincible = true;
+		anim.SetBool("invincible", true);
 		time = 0;
 
 	} 
@@ -31,6 +39,7 @@ public class PlayerHealth : MonoBehaviour {
 		time += Time.deltaTime;
 		if (time >= duration && invincible == true) {
 			invincible = false;
+			anim.SetBool("invincible", false);
 		}
 	}
 }
