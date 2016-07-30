@@ -1,11 +1,12 @@
-﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\enemySpawner.cs">
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Movements.cs">
     <Files>
-      <File FileName="Assets\Scripts\enemySpawner.cs" Line="28" Column="68" />
-      <File FileName="..\DietNinja\Assets\FoodSpawner.cs" Line="50" Column="53" />
-      <File FileName="Assets\Scripts\Movements.cs" Line="15" Column="34" />
-      <File FileName="Assets\Scripts\enemyMovement.cs" Line="15" Column="86" />
+      <File FileName="Assets\Scripts\scroll.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\enemySpawner.cs" Line="19" Column="44" />
+      <File FileName="Assets\Scripts\Movements.cs" Line="20" Column="5" />
+      <File FileName="Assets\Scripts\enemyMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Destroy.cs" Line="19" Column="36" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

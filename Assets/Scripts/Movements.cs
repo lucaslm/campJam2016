@@ -16,8 +16,8 @@ public class Movements : MonoBehaviour {
 
 		telaPos = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
 		//float half_height = gameObject.GetComponent<Renderer>().bounds.size.y/2;
-		print (telaPos);
-		print (playerPos);
+		//print (telaPos);
+		//print (playerPos);
 		//if (Input.GetKeyDown (KeyCode.DownArrow) && playerPos.y < (wrld.y - half_height)) {
 
 		//Movimentação do personagem
