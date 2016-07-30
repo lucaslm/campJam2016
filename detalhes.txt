@@ -1,0 +1,30 @@
+Resumo: Side scroller, Astronautas e unicornios.
+
+Estoria: O astronauta Joao Moonwalker, na missao Apollo 23 encontra um artefato alienigena de poderes inimaginagnificos. 
+Agora, ele precisa encontrar um jeito de retornar para casa.
+
+Premissa: Atirar nos inimigos para destrui-los
+
+Poderes:
+Poder Nyan Cat = invencibilidade
+Poder --- = supertiro.
+Poder Vida
+
+Levels:
+1o level = lua
+2o level = espaco*
+...
+continua.
+
+Oponentes:
+Danos de colisao - fracos
+Danos de projeteis - mais substanciais
+Boss (final).*
+
+Dificuldades:
+Tranqs: 5 vidas*
+Normal: 3 vidas*
+Hmmmm: 1 vida (volta do inicio da fase).*
+Hardcore: 1 vida (permadeath).
+
+*Se der tempo.
