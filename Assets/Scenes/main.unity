@@ -1358,6 +1358,52 @@ MonoBehaviour:
   readytofire: 0
   duration: 5
   sound: {fileID: 1000014098535420, guid: 01345b03cfe6c634da7d63e9c06c488a, type: 2}
+--- !u!1001 &1396416927
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4000013457156788, guid: 786e5dabdb097304cbf7b3656c5688bd, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -19.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013457156788, guid: 786e5dabdb097304cbf7b3656c5688bd, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013457156788, guid: 786e5dabdb097304cbf7b3656c5688bd, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013457156788, guid: 786e5dabdb097304cbf7b3656c5688bd, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013457156788, guid: 786e5dabdb097304cbf7b3656c5688bd, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013457156788, guid: 786e5dabdb097304cbf7b3656c5688bd, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013457156788, guid: 786e5dabdb097304cbf7b3656c5688bd, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013457156788, guid: 786e5dabdb097304cbf7b3656c5688bd, type: 2}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010823698744, guid: 786e5dabdb097304cbf7b3656c5688bd, type: 2}
+      propertyPath: m_Name
+      value: EnemyBoss
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 786e5dabdb097304cbf7b3656c5688bd, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1489105992
 GameObject:
   m_ObjectHideFlags: 0
@@ -1986,7 +2032,7 @@ MonoBehaviour:
   maxTime: 2
   spawnTimeShooter: 10
   timeinbetween: 15
-  totalEnemies: 50
+  totalEnemies: 3
   totalShooters: 10
   doSpawn: 1
   doSpawnShooter: 1
