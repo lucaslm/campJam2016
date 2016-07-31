@@ -1,12 +1,17 @@
 fileFormatVersion: 2
-guid: 2125d7cb1dd10a440a5743b003d35608
-timeCreated: 1469914222
+guid: 0e7f3019a22763e4db315eaa398bc5c4
+timeCreated: 1469946084
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Meteor_0
-    21300002: Meteor_1
-    21300004: Meteor_2
+    21300000: Power-Up-Laser_0
+    21300002: Power-Up-Laser_1
+    21300004: Power-Up-Laser_2
+    21300006: Power-Up-Laser_3
+    21300008: Power-Up-Laser_4
+    21300010: Power-Up-Laser_5
+    21300012: Power-Up-Laser_6
+    21300014: Power-Up-Laser_7
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -56,7 +61,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Meteor_0
+      name: Power-Up-Laser_0
       rect:
         serializedVersion: 2
         x: 0
@@ -69,7 +74,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Meteor_1
+      name: Power-Up-Laser_1
       rect:
         serializedVersion: 2
         x: 64
@@ -82,10 +87,75 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Meteor_2
+      name: Power-Up-Laser_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Power-Up-Laser_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Power-Up-Laser_4
       rect:
         serializedVersion: 2
         x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Power-Up-Laser_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Power-Up-Laser_6
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Power-Up-Laser_7
+      rect:
+        serializedVersion: 2
+        x: 192
         y: 0
         width: 64
         height: 64
