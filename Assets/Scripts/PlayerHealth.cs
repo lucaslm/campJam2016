@@ -7,6 +7,7 @@ public class PlayerHealth : MonoBehaviour {
 
 	Animator anim;
 	public bool invincible = false;
+	public bool hasLaser = false;
 	public float duration=5.0f;
 	float time;
 	Text scoreTF;
@@ -16,7 +17,6 @@ public class PlayerHealth : MonoBehaviour {
 		anim = GetComponent<Animator>();
 		scoreTF = GameObject.Find ("ScoreLabel").GetComponents<Text> () [0];
 	}
-
 	void OnTriggerEnter2D (Collider2D other)
 	{
 		if (other.tag == "Enemy" || other.tag == "EnemyShooter" || other.tag == "EnemyShot"){
@@ -39,13 +39,20 @@ public class PlayerHealth : MonoBehaviour {
 		anim.SetBool("invincible", true);
 		time = 0;
 
-	} 
+	}
+	public void setLaserOn(){
+		hasLaser = true;
+		print (hasLaser);
+	}
 
 	void Update(){
 		time += Time.deltaTime;
 		if (time >= duration && invincible == true) {
 			invincible = false;
 			anim.SetBool("invincible", false);
+			if(hasLaser){
+				anim.SetBool ("laserFire",true);
+			}
 		}
 	}
 }

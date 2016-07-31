@@ -19,7 +19,7 @@ public class EnemyHealth : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		print (healthStatic);
+//		print (healthStatic);
 	}
 
 	void OnTriggerEnter2D(Collider2D coll)

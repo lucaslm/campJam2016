@@ -25,10 +25,12 @@ public class Shoot : MonoBehaviour {
 		}
 
 
+
 		//Cooldown
 		time+=Time.deltaTime;
 		if (time >= cooldown) {
 			cantshoot = false;
+
 		}
 	}
 }
