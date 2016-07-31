@@ -41,7 +41,8 @@ public class PlayerHealth : MonoBehaviour {
 		
 	//Invincibility
 	public void setInvincible(){
-		
+
+		GameObject.Find ("Music(Clone)").GetComponent<Songchoice> ().Song(2);
 		invincible = true;
 		anim.SetBool("invincible", true);
 		time = 0;
@@ -57,8 +58,9 @@ public class PlayerHealth : MonoBehaviour {
 	void Update(){
 		time += Time.deltaTime;
 		if (time >= duration && invincible == true) {
-			invincible = false;
 			anim.SetBool ("invincible", false);
+			invincible = false;
+			GameObject.Find ("Music(Clone)").GetComponent<Songchoice> ().Song(0);
 		}
 
 		if (Input.GetKeyDown (KeyCode.R) && readytofire) {

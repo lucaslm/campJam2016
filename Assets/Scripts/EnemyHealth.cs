@@ -27,7 +27,7 @@ public class EnemyHealth : MonoBehaviour {
 		{
 
 			effect = Instantiate (sound, new Vector3 (0, 0, 0), Quaternion.identity) as GameObject;
-			effect.GetComponent<Songchoice> ().Choice (2);
+			effect.GetComponent<Songchoice> ().Choice (2); 
 			Destroy (effect);
 
 			if(itsShooter)

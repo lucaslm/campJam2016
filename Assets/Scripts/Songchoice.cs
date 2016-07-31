@@ -36,4 +36,23 @@ public class Songchoice : MonoBehaviour {
 			break;
 		}
 	}
+
+	public void Song(int song){
+		switch (song) {
+		case 0:
+			audio.clip = song1;
+			audio.Play ();
+			break;
+		case 1:
+			audio.clip = songBoss;
+			audio.Play ();
+			break;
+		case 2:
+			audio.clip = nyansong;
+			audio.Play ();
+			break;
+
+		}
+	}
+
 }
