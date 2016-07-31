@@ -1420,6 +1420,48 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2815bf20f7d8ed54e820a6707abef6c0, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &1581836417
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4000010988937252, guid: a055bc159f065fe43b890d92c84dd20c, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010988937252, guid: a055bc159f065fe43b890d92c84dd20c, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -4.7456756
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010988937252, guid: a055bc159f065fe43b890d92c84dd20c, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010988937252, guid: a055bc159f065fe43b890d92c84dd20c, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010988937252, guid: a055bc159f065fe43b890d92c84dd20c, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010988937252, guid: a055bc159f065fe43b890d92c84dd20c, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010988937252, guid: a055bc159f065fe43b890d92c84dd20c, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010988937252, guid: a055bc159f065fe43b890d92c84dd20c, type: 2}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: a055bc159f065fe43b890d92c84dd20c, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1607960684
 GameObject:
   m_ObjectHideFlags: 0
@@ -1684,6 +1726,48 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
+--- !u!1001 &1725996204
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4000013843581630, guid: 1d1985189ac8ae44ea29b3237eac6172, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013843581630, guid: 1d1985189ac8ae44ea29b3237eac6172, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013843581630, guid: 1d1985189ac8ae44ea29b3237eac6172, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013843581630, guid: 1d1985189ac8ae44ea29b3237eac6172, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013843581630, guid: 1d1985189ac8ae44ea29b3237eac6172, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013843581630, guid: 1d1985189ac8ae44ea29b3237eac6172, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013843581630, guid: 1d1985189ac8ae44ea29b3237eac6172, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013843581630, guid: 1d1985189ac8ae44ea29b3237eac6172, type: 2}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 1d1985189ac8ae44ea29b3237eac6172, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1762680949
 GameObject:
   m_ObjectHideFlags: 0
@@ -1814,7 +1898,7 @@ MonoBehaviour:
   meteor0: {fileID: 1000010021799790, guid: 3ad732c703fa3bc418f94e5290828693, type: 2}
   meteor1: {fileID: 1000013012741930, guid: 768ddf74875b5a84cafed8ff593e6901, type: 2}
   meteor2: {fileID: 1000013813184250, guid: 8d5d8ffddf2f5ef48a61977dc9bbda39, type: 2}
-  EnemyShooter: {fileID: 1000010142003794, guid: bc7fafc4559c38c43b6fbf1f52518dc6,
+  EnemyShooter: {fileID: 1000013815464118, guid: a055bc159f065fe43b890d92c84dd20c,
     type: 2}
   Boss: {fileID: 1000010823698744, guid: 786e5dabdb097304cbf7b3656c5688bd, type: 2}
   minTime: 1
