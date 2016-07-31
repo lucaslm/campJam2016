@@ -89,6 +89,7 @@ MonoBehaviour:
   itsStatic: 0
   itsMov: 0
   itsBoss: 1
+  sound: {fileID: 1000014098535420, guid: 01345b03cfe6c634da7d63e9c06c488a, type: 2}
 --- !u!212 &212000013836013384
 SpriteRenderer:
   m_ObjectHideFlags: 1

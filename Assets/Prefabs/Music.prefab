@@ -50,11 +50,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 37ee1e11d77c3f54bb907707c9ab5f8c, type: 3}
+  m_audioClip: {fileID: 8300000, guid: da83e44ad5885c34b8ef6fca2bd20232, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.54
+  m_Volume: 0.7
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   Priority: 36
@@ -126,11 +126,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cb307077d502a44390f8e4cb76b3289, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  song1: {fileID: 8300000, guid: 37ee1e11d77c3f54bb907707c9ab5f8c, type: 3}
-  songBoss: {fileID: 0}
+  song1: {fileID: 8300000, guid: da83e44ad5885c34b8ef6fca2bd20232, type: 3}
+  songBoss: {fileID: 8300000, guid: 82a031e663d35aa4aa4f4ceb4388bf89, type: 3}
   nyan: {fileID: 0}
-  nyansong: {fileID: 8300000, guid: 9c669bbf92c1ee24fa098d03e0754060, type: 3}
-  laser: {fileID: 0}
+  nyansong: {fileID: 8300000, guid: aa6ada96a5bd9c44ea6a085dfbcb0966, type: 3}
+  laserpick: {fileID: 0}
   hit: {fileID: 0}
   dead: {fileID: 0}
   kill: {fileID: 0}
+  lasershot: {fileID: 0}

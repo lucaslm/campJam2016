@@ -4,8 +4,9 @@ using System.Collections;
 [RequireComponent(typeof(AudioSource))]
 public class Songchoice : MonoBehaviour {
 
-	public AudioClip song1, songBoss, nyan, nyansong, laser, hit, dead, kill;
+	public AudioClip song1, songBoss, nyan, nyansong, laserpick, hit, dead, kill, lasershot;
 	private AudioSource audio;
+	float resumeTime;
 
 
 	void Awake(){
@@ -19,7 +20,7 @@ public class Songchoice : MonoBehaviour {
 			audio.Play ();
 			break;
 		case 1:
-			audio.clip = laser;
+			audio.clip = laserpick;
 			audio.Play ();
 			break;
 		case 2:
@@ -34,25 +35,28 @@ public class Songchoice : MonoBehaviour {
 			audio.clip = kill;
 			audio.Play ();
 			break;
+		case 5:
+			audio.clip = lasershot;
+			audio.Play ();
+			break;
 		}
 	}
 
-	public void Song(int song){
+	public void Song(int song, float duration){
 		switch (song) {
 		case 0:
 			audio.clip = song1;
-			audio.Play ();
+			audio.time = resumeTime;
 			break;
 		case 1:
 			audio.clip = songBoss;
-			audio.Play ();
 			break;
 		case 2:
+			resumeTime = audio.time+duration;
 			audio.clip = nyansong;
-			audio.Play ();
 			break;
-
 		}
+		audio.Play();
 	}
 
 }

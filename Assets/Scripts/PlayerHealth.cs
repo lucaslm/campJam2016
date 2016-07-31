@@ -42,7 +42,7 @@ public class PlayerHealth : MonoBehaviour {
 	//Invincibility
 	public void setInvincible(){
 
-		GameObject.Find ("Music(Clone)").GetComponent<Songchoice> ().Song(2);
+		GameObject.Find ("Music(Clone)").GetComponent<Songchoice> ().Song(2, duration); //Nyan Song
 		invincible = true;
 		anim.SetBool("invincible", true);
 		time = 0;
@@ -60,10 +60,14 @@ public class PlayerHealth : MonoBehaviour {
 		if (time >= duration && invincible == true) {
 			anim.SetBool ("invincible", false);
 			invincible = false;
-			GameObject.Find ("Music(Clone)").GetComponent<Songchoice> ().Song(0);
+			GameObject.Find ("Music(Clone)").GetComponent<Songchoice> ().Song(0, duration); //Back to normal song.
 		}
 
 		if (Input.GetKeyDown (KeyCode.R) && readytofire) {
+
+			effect = Instantiate (sound, new Vector3 (0, 0, 0), Quaternion.identity) as GameObject;
+			effect.GetComponent<Songchoice> ().Choice (5);
+			Destroy (effect);
 
 			// TODO: make laser code	    
 			

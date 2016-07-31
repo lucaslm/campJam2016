@@ -1273,7 +1273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   invincible: 0
-  readytofire: 0
+  readytofire: 1
   duration: 5
   sound: {fileID: 1000014098535420, guid: 01345b03cfe6c634da7d63e9c06c488a, type: 2}
 --- !u!1 &1489105992

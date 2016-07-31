@@ -41,6 +41,7 @@ public class Spawner : MonoBehaviour
 			yield return new WaitForSeconds (Random.Range (minTime, maxTime));
 		}
 		if (doSpawnBoss == true) {
+			GameObject.Find ("Music(Clone)").GetComponent<Songchoice> ().Song(1, 5);//Boss song.
 			Instantiate (Boss, new Vector3 (7, 0, 0), Quaternion.identity);
 			boss = true;
 		}

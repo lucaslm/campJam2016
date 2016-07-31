@@ -52,7 +52,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 37ee1e11d77c3f54bb907707c9ab5f8c, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.54
+  m_Volume: 0.62
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -130,6 +130,8 @@ MonoBehaviour:
   songBoss: {fileID: 0}
   nyan: {fileID: 0}
   nyansong: {fileID: 0}
-  laser: {fileID: 0}
+  laserpick: {fileID: 0}
   hit: {fileID: 0}
   dead: {fileID: 8300000, guid: 37ee1e11d77c3f54bb907707c9ab5f8c, type: 3}
+  kill: {fileID: 0}
+  lasershot: {fileID: 8300000, guid: 7ba66e378a4cb7143bb20c2479564a53, type: 3}
