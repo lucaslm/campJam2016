@@ -42,7 +42,7 @@ public class Spawner : MonoBehaviour
 		}
 		if (doSpawnBoss == true) {
 			GameObject.Find ("Music(Clone)").GetComponent<Songchoice> ().Song(1, 5);//Boss song.
-			Instantiate (Boss, new Vector3 (7, 0, 0), Quaternion.identity);
+			Instantiate (Boss, new Vector3 (5, 0, 0), Quaternion.identity);
 			boss = true;
 		}
 	}

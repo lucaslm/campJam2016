@@ -5,7 +5,7 @@ using System.Collections;
 public class Songchoice : MonoBehaviour {
 
 	public AudioClip song1, songBoss, nyan, nyansong, laserpick, hit, dead, kill, lasershot, playershot, enemyshot;
-	public AudioClip bossprojectile, bosscharge;
+	public AudioClip bossprojectile, bosscharge, dieboss, victory, final;
 	private AudioSource audio;
 	float resumeTime;
 
@@ -58,6 +58,19 @@ public class Songchoice : MonoBehaviour {
 			audio.clip = bossprojectile;
 			dur = 1.0f;
 			break;
+		case 10:
+			audio.clip = dieboss;
+				dur = 2.0f;
+			break;
+		case 11:
+			audio.clip = victory;
+			dur = 3.0f;
+			break;
+		case 12:
+			audio.clip = final;
+			dur = 4.0f;
+			break;
+		
 		}
 		audio.Play ();
 		StartCoroutine (cutsound(dur));

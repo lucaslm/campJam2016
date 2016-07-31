@@ -24,6 +24,7 @@ GameObject:
   - 60: {fileID: 60000012832567700}
   - 95: {fileID: 95000010201230556}
   - 114: {fileID: 114000013630905828}
+  - 114: {fileID: 114000012106881870}
   m_Layer: 0
   m_Name: EnemyBoss
   m_TagString: Enemy
@@ -145,6 +146,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114000012106881870
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010823698744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06da968943175a24db549a7540fe8dee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxy: 3.5
 --- !u!114 &114000013630905828
 MonoBehaviour:
   m_ObjectHideFlags: 1

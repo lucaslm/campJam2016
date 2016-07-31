@@ -23,7 +23,7 @@ public class PlayerHealth : MonoBehaviour {
 
 	void OnTriggerEnter2D (Collider2D other)
 	{
-		if (other.tag == "Enemy" || other.tag == "EnemyShooter" || other.tag == "EnemyShot"){
+		if (other.tag == "Enemy" || other.tag == "EnemyShooter" || other.tag == "EnemyShot" && other.name != "Boss(Clone)"){
 			Destroy (other.gameObject);
 
 			if (invincible == false) {

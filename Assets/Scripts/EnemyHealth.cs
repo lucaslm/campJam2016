@@ -70,7 +70,12 @@ public class EnemyHealth : MonoBehaviour {
 				if (healthBoss <= 0) {
 					Destroy (gameObject);
 					effect = Instantiate (sound, new Vector3 (0, 0, 0), Quaternion.identity) as GameObject;
-					effect.GetComponent<Songchoice> ().Choice (4);
+					effect.GetComponent<Songchoice> ().Choice (10);
+					effect = Instantiate (sound, new Vector3 (0, 0, 0), Quaternion.identity) as GameObject;
+					effect.GetComponent<Songchoice> ().Choice (11);
+					effect = Instantiate (sound, new Vector3 (0, 0, 0), Quaternion.identity) as GameObject;
+					effect.GetComponent<Songchoice> ().Choice (12);
+
 					scoreTF.text = (int.Parse (scoreTF.text) + 100).ToString ();
 				}
 			}
