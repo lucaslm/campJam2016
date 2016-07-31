@@ -2,7 +2,6 @@
 using System.Collections;
 
 public class PlayerMovement : MonoBehaviour {
-	Vector3 playerPos, telaPos;
 	public float aceleracao;
 
 	// Use this for initialization
@@ -11,14 +10,6 @@ public class PlayerMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
-		playerPos = transform.position;
-
-		telaPos = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
-		//float half_height = gameObject.GetComponent<Renderer>().bounds.size.y/2;
-		//print (telaPos);
-		//print (playerPos);
-		//if (Input.GetKeyDown (KeyCode.DownArrow) && playerPos.y < (wrld.y - half_height)) {
 
 		//Movimentação do personagem
 		if (Input.GetKey (KeyCode.UpArrow)) {

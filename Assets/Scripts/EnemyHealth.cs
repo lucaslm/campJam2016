@@ -17,21 +17,11 @@ public class EnemyHealth : MonoBehaviour {
 		healthShooter = 7;
 		healthBoss = 100;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		print (healthStatic);
-	}
 
 	void OnTriggerEnter2D(Collider2D coll)
 	{
-	//	if(coll.tag == "Player")
-	//	{
-	//		Destroy (coll.gameObject);
-	//  }else 
 		if(coll.tag == "PlayerShot")
 		{
-			//print ("é tiroo");
 			if(itsShooter)
 			{
 				healthShooter--;
@@ -45,7 +35,6 @@ public class EnemyHealth : MonoBehaviour {
 			{
 				
 				healthMov--;
-				print (healthMov + "alomov");
 				if(healthMov <=0)
 				{
 					Destroy (gameObject);
@@ -55,13 +44,10 @@ public class EnemyHealth : MonoBehaviour {
 			if(itsStatic)
 			{
 				healthStatic--;
-				print (healthStatic);
 				if(healthStatic <= 0)
 				{
-					print ("menos 0");
 					Destroy (gameObject);
 					scoreTF.text = (int.Parse (scoreTF.text) + 1).ToString ();
-
 				}
 			}
 			if (itsBoss) {
