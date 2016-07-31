@@ -20,8 +20,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013177122098}
   - 82: {fileID: 82000013291369490}
+  - 114: {fileID: 114000013214112458}
   m_Layer: 0
-  m_Name: MusicPlayer
+  m_Name: Music
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -114,3 +115,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114000013214112458
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013849957344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cb307077d502a44390f8e4cb76b3289, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  song1: {fileID: 0}
+  songBoss: {fileID: 0}
+  nyan: {fileID: 0}
+  nyansong: {fileID: 0}
+  laser: {fileID: 0}
+  hit: {fileID: 0}
+  dead: {fileID: 0}

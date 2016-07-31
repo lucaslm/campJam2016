@@ -6,6 +6,9 @@ public class EnemyHealth : MonoBehaviour {
 	int healthShooter, healthStatic, healthMov, healthBoss;
 	public bool itsShooter, itsStatic, itsMov, itsBoss;
 	Text scoreTF;
+	public GameObject sound;
+	GameObject effect;
+
 
 	// Use this for initialization
 	void Start () {
@@ -22,12 +25,20 @@ public class EnemyHealth : MonoBehaviour {
 	{
 		if(coll.tag == "PlayerShot")
 		{
+
+			effect = Instantiate (sound, new Vector3 (0, 0, 0), Quaternion.identity) as GameObject;
+			effect.GetComponent<Songchoice> ().Choice (2);
+			Destroy (effect);
+
 			if(itsShooter)
 			{
 				healthShooter--;
 				if(healthShooter <= 0)
 				{
 					Destroy (gameObject);
+					effect = Instantiate (sound, new Vector3 (0, 0, 0), Quaternion.identity) as GameObject;
+					effect.GetComponent<Songchoice> ().Choice (4);
+					Destroy (effect);
 					scoreTF.text = (int.Parse (scoreTF.text) + 3).ToString ();
 				}
 			}
@@ -38,6 +49,9 @@ public class EnemyHealth : MonoBehaviour {
 				if(healthMov <=0)
 				{
 					Destroy (gameObject);
+					effect = Instantiate (sound, new Vector3 (0, 0, 0), Quaternion.identity) as GameObject;
+					effect.GetComponent<Songchoice> ().Choice (4);
+					Destroy (effect);
 					scoreTF.text = (int.Parse (scoreTF.text) + 2).ToString ();
 				}
 			}
@@ -47,6 +61,9 @@ public class EnemyHealth : MonoBehaviour {
 				if(healthStatic <= 0)
 				{
 					Destroy (gameObject);
+					effect = Instantiate (sound, new Vector3 (0, 0, 0), Quaternion.identity) as GameObject;
+					effect.GetComponent<Songchoice> ().Choice (4);
+					Destroy (effect);
 					scoreTF.text = (int.Parse (scoreTF.text) + 1).ToString ();
 				}
 			}
@@ -55,6 +72,9 @@ public class EnemyHealth : MonoBehaviour {
 				print (healthBoss);
 				if (healthBoss <= 0) {
 					Destroy (gameObject);
+					effect = Instantiate (sound, new Vector3 (0, 0, 0), Quaternion.identity) as GameObject;
+					effect.GetComponent<Songchoice> ().Choice (4);
+					Destroy (effect);
 					scoreTF.text = (int.Parse (scoreTF.text) + 100).ToString ();
 				}
 			}

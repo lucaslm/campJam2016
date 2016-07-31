@@ -12,6 +12,8 @@ public class PlayerHealth : MonoBehaviour {
 	public float duration   = 5.0f;
 	float time;
 	Text scoreTF;
+	public GameObject sound;
+	GameObject effect;
 
 	void Start() {
 		// Set a reference to the player's animations controller
@@ -26,6 +28,9 @@ public class PlayerHealth : MonoBehaviour {
 
 			if (invincible == false) {
 				Destroy (gameObject);
+				effect = Instantiate (sound, new Vector3 (0, 0, 0), Quaternion.identity) as GameObject;
+				effect.GetComponent<Songchoice> ().Choice (3);
+				Destroy (effect);
 				SceneManager.LoadScene ("main");
 			} 
 			else {
