@@ -12,6 +12,7 @@ public class ObjectMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		
 		GetComponent<Rigidbody2D> ().AddForce (-transform.right*acceleration*Time.deltaTime);
 	}
 }

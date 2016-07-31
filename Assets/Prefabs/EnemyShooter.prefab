@@ -21,10 +21,10 @@ GameObject:
   - 4: {fileID: 4000011223007644}
   - 212: {fileID: 212000013971765372}
   - 95: {fileID: 95000012602563624}
-  - 114: {fileID: 114000010415513470}
   - 50: {fileID: 50000011496725632}
   - 60: {fileID: 60000010127588346}
   - 114: {fileID: 114000010103249860}
+  - 114: {fileID: 114000014015562372}
   m_Layer: 0
   m_Name: EnemyShooter
   m_TagString: EnemyShooter
@@ -160,7 +160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 1000013945758486, guid: 3a979b3b0f1251e4882630a660a82714, type: 2}
---- !u!114 &114000010415513470
+--- !u!114 &114000014015562372
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ea9426d38471034eacb4953e8f77b79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceleration: 30
+  acceleration: 0
 --- !u!212 &212000013971765372
 SpriteRenderer:
   m_ObjectHideFlags: 1

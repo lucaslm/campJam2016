@@ -21,9 +21,9 @@ GameObject:
   - 4: {fileID: 4000011769293924}
   - 212: {fileID: 212000011099995310}
   - 95: {fileID: 95000014093434638}
-  - 114: {fileID: 114000014211222928}
   - 61: {fileID: 61000010272755754}
   - 50: {fileID: 50000013532065100}
+  - 114: {fileID: 114000012184117794}
   m_Layer: 0
   m_Name: EnermyBullet
   m_TagString: Untagged
@@ -92,7 +92,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114000014211222928
+--- !u!114 &114000012184117794
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -100,10 +100,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000013945758486}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ea9426d38471034eacb4953e8f77b79, type: 3}
+  m_Script: {fileID: 11500000, guid: 1c6e1e5466c818d4eab503d4738636b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceleration: 250
+  acceleration: 8
+  topSpeed: 8
 --- !u!212 &212000011099995310
 SpriteRenderer:
   m_ObjectHideFlags: 1

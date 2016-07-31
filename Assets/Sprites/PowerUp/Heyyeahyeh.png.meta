@@ -1,19 +1,15 @@
 fileFormatVersion: 2
-guid: 00de895176dd3ec4885108f3dd573aa8
-timeCreated: 1469991807
+guid: d55e025d174bf02489693e96041ec62f
+timeCreated: 1469991845
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Lazer-beam_0
-    21300002: Lazer-beam_1
-    21300004: Lazer-beam_2
-    21300006: Lazer-beam_3
-    21300008: Lazer-beam_4
-    21300010: Lazer-beam_5
-    21300012: Lazer-beam_6
-    21300014: Lazer-beam_7
-    21300016: Lazer-beam_8
-    21300018: Lazer-beam_9
+    21300000: Heyyeahyeh_0
+    21300002: Heyyeahyeh_1
+    21300004: Heyyeahyeh_2
+    21300006: Heyyeahyeh_3
+    21300008: Heyyeahyeh_4
+    21300010: Heyyeahyeh_5
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -63,111 +59,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Lazer-beam_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 768
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Lazer-beam_1
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 768
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Lazer-beam_2
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 768
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Lazer-beam_3
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 768
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Lazer-beam_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 512
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Lazer-beam_5
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 512
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Lazer-beam_6
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 512
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Lazer-beam_7
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 512
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Lazer-beam_8
+      name: Heyyeahyeh_0
       rect:
         serializedVersion: 2
         x: 0
@@ -180,11 +72,63 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Lazer-beam_9
+      name: Heyyeahyeh_1
       rect:
         serializedVersion: 2
         x: 256
         y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Heyyeahyeh_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Heyyeahyeh_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Heyyeahyeh_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Heyyeahyeh_5
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
         width: 256
         height: 256
       alignment: 0
