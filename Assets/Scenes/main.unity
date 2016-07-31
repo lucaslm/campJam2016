@@ -284,7 +284,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 256506248}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.5459085, y: -1.572015, z: 0}
+  m_LocalPosition: {x: 1.65, y: -9.48, z: 0}
   m_LocalScale: {x: 2.25, y: 2.25, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -1560,6 +1560,7 @@ MonoBehaviour:
   topBorder: {fileID: 1762680949}
   bottomBorder: {fileID: 1684194452}
   nyan: {fileID: 1000013117514280, guid: 0303948367f68e44899f407abba70b59, type: 2}
+  laser: {fileID: 1000012635858664, guid: 2c550d8d1edc9de48858b2eb3286b08d, type: 2}
   minTime: 1
   maxTime: 2
   spawnTimeShooter: 10

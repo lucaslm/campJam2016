@@ -11,6 +11,7 @@ TagManager:
   - EnemyShot
   - EnemyShooter
   - EnemyMov
+  - Laser
   layers:
   - Default
   - TransparentFX
