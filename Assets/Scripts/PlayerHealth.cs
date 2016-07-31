@@ -60,12 +60,13 @@ public class PlayerHealth : MonoBehaviour {
 
 		if (Input.GetKeyDown (KeyCode.R) && readytofire==true) {
 
-			float LaserHeight = HitBoxLaser.GetComponent<Renderer> ().bounds.extents [1];
+			float LaserHeight = HitBoxLaser.GetComponent<Collider> ().bounds.extents [1];
 			print ("Shooting");
 
 			GameObject[] allObjects = GameObject.FindGameObjectsWithTag ("Enemy");
 			foreach (GameObject GO in allObjects) {
 				float GOHeight = GO.GetComponent<Renderer> ().bounds.extents [1];
+				boundPoint
 				print ("LaserHeight = "+LaserHeight);
 				print (Mathf.Abs(GO.transform.position.y - HitBoxLaser.transform.position.y));
 				if (GO.transform.position.x > HitBoxLaser.transform.position.x &&
