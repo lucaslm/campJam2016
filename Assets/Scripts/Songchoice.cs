@@ -4,7 +4,8 @@ using System.Collections;
 [RequireComponent(typeof(AudioSource))]
 public class Songchoice : MonoBehaviour {
 
-	public AudioClip song1, songBoss, nyan, nyansong, laserpick, hit, dead, kill, lasershot;
+	public AudioClip song1, songBoss, nyan, nyansong, laserpick, hit, dead, kill, lasershot, playershot, enemyshot;
+	public AudioClip bossprojectile, bosscharge;
 	private AudioSource audio;
 	float resumeTime;
 
@@ -14,32 +15,59 @@ public class Songchoice : MonoBehaviour {
 	}
 
 	public void Choice(int choice){
+		float dur=1.0f;
+
 		switch (choice) {
 		case 0:
 			audio.clip = nyan;
-			audio.Play ();
+			dur = 1.0f;
 			break;
 		case 1:
 			audio.clip = laserpick;
-			audio.Play ();
+			dur = 1.0f;
 			break;
 		case 2:
 			audio.clip = hit;
-			audio.Play ();
+			dur=1.0f;
 			break;
 		case 3:
 			audio.clip = dead;
-			audio.Play ();
+			dur=1.0f;
 			break;
 		case 4:
 			audio.clip = kill;
-			audio.Play ();
+			dur = 3.0f;
 			break;
 		case 5:
 			audio.clip = lasershot;
-			audio.Play ();
+			dur = 7.0f;
+			break;
+		case 6:
+			audio.clip = playershot;
+			dur = 1.0f;
+			break;
+		case 7:
+			audio.clip = enemyshot;
+			dur = 1.0f;
+			break;
+		case 8:
+			audio.clip = bosscharge;
+			dur = 1.0f;
+			break;
+		case 9:
+			audio.clip = bossprojectile;
+			dur = 1.0f;
 			break;
 		}
+		audio.Play ();
+		StartCoroutine (cutsound(dur));
+	}
+
+
+
+	IEnumerator cutsound(float dur){
+		yield return new WaitForSeconds (dur);
+		Destroy (this);
 	}
 
 	public void Song(int song, float duration){

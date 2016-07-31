@@ -1055,6 +1055,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shot: {fileID: 1000012470802064, guid: 2815bf20f7d8ed54e820a6707abef6c0, type: 2}
   cooldown: 0.15
+  sound: {fileID: 1000014098535420, guid: 01345b03cfe6c634da7d63e9c06c488a, type: 2}
 --- !u!1 &1217657739
 GameObject:
   m_ObjectHideFlags: 0
@@ -1273,7 +1274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   invincible: 0
-  readytofire: 1
+  readytofire: 0
   duration: 5
   sound: {fileID: 1000014098535420, guid: 01345b03cfe6c634da7d63e9c06c488a, type: 2}
 --- !u!1 &1489105992

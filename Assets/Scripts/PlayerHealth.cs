@@ -30,7 +30,6 @@ public class PlayerHealth : MonoBehaviour {
 				Destroy (gameObject);
 				effect = Instantiate (sound, new Vector3 (0, 0, 0), Quaternion.identity) as GameObject;
 				effect.GetComponent<Songchoice> ().Choice (3);
-				Destroy (effect);
 				SceneManager.LoadScene ("main");
 			} 
 			else {
@@ -67,7 +66,6 @@ public class PlayerHealth : MonoBehaviour {
 
 			effect = Instantiate (sound, new Vector3 (0, 0, 0), Quaternion.identity) as GameObject;
 			effect.GetComponent<Songchoice> ().Choice (5);
-			Destroy (effect);
 
 			// TODO: make laser code	    
 			

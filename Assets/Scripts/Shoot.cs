@@ -7,6 +7,9 @@ public class Shoot : MonoBehaviour {
 	public float cooldown = 1.0f;
 	float time;
 	bool cantshoot;
+	public GameObject sound;
+	GameObject effect;
+
 
 	// Use this for initialization
 	void Start () {
@@ -19,6 +22,8 @@ public class Shoot : MonoBehaviour {
 		if (!cantshoot) {
 			if (Input.GetKeyDown (KeyCode.Space)) {
 				Instantiate (shot, transform.position, Quaternion.identity);
+				effect = Instantiate (sound, new Vector3 (0, 0, 0), Quaternion.identity) as GameObject;
+				effect.GetComponent<Songchoice> ().Choice (6);
 				time = 0;
 				cantshoot = true;
 			}

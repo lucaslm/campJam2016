@@ -131,7 +131,11 @@ MonoBehaviour:
   nyan: {fileID: 0}
   nyansong: {fileID: 0}
   laserpick: {fileID: 0}
-  hit: {fileID: 0}
-  dead: {fileID: 8300000, guid: 37ee1e11d77c3f54bb907707c9ab5f8c, type: 3}
-  kill: {fileID: 0}
+  hit: {fileID: 8300000, guid: ad18ccfb0b4ef2a438a75720dd702500, type: 3}
+  dead: {fileID: 8300000, guid: 5dac649c17debb4449e2a65f081dda92, type: 3}
+  kill: {fileID: 8300000, guid: 2b1d8dd7c3a548e4da5d57e5f30d1404, type: 3}
   lasershot: {fileID: 8300000, guid: 7ba66e378a4cb7143bb20c2479564a53, type: 3}
+  playershot: {fileID: 8300000, guid: 9577165016f01404d8ba1e9c3d6f10d1, type: 3}
+  enemyshot: {fileID: 8300000, guid: bff7a9e68b322024a95ad6672041b2eb, type: 3}
+  bossprojectile: {fileID: 8300000, guid: 0860874bf10fb5e46a576d62bc76ccd0, type: 3}
+  bosscharge: {fileID: 8300000, guid: 715cc1c88e43bfa49a457448bf9e7bd7, type: 3}

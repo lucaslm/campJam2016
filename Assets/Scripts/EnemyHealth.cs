@@ -28,7 +28,6 @@ public class EnemyHealth : MonoBehaviour {
 
 			effect = Instantiate (sound, new Vector3 (0, 0, 0), Quaternion.identity) as GameObject;
 			effect.GetComponent<Songchoice> ().Choice (2); 
-			Destroy (effect);
 
 			if(itsShooter)
 			{
@@ -38,7 +37,6 @@ public class EnemyHealth : MonoBehaviour {
 					Destroy (gameObject);
 					effect = Instantiate (sound, new Vector3 (0, 0, 0), Quaternion.identity) as GameObject;
 					effect.GetComponent<Songchoice> ().Choice (4);
-					Destroy (effect);
 					scoreTF.text = (int.Parse (scoreTF.text) + 3).ToString ();
 				}
 			}
@@ -63,7 +61,6 @@ public class EnemyHealth : MonoBehaviour {
 					Destroy (gameObject);
 					effect = Instantiate (sound, new Vector3 (0, 0, 0), Quaternion.identity) as GameObject;
 					effect.GetComponent<Songchoice> ().Choice (4);
-					Destroy (effect);
 					scoreTF.text = (int.Parse (scoreTF.text) + 1).ToString ();
 				}
 			}
@@ -74,7 +71,6 @@ public class EnemyHealth : MonoBehaviour {
 					Destroy (gameObject);
 					effect = Instantiate (sound, new Vector3 (0, 0, 0), Quaternion.identity) as GameObject;
 					effect.GetComponent<Songchoice> ().Choice (4);
-					Destroy (effect);
 					scoreTF.text = (int.Parse (scoreTF.text) + 100).ToString ();
 				}
 			}
