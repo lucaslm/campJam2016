@@ -3,8 +3,8 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class EnemyHealth : MonoBehaviour {
-	int healthShooter, healthStatic, healthMov;
-	public bool itsShooter, itsStatic, itsMov;
+	int healthShooter, healthStatic, healthMov, healthBoss;
+	public bool itsShooter, itsStatic, itsMov, itsBoss;
 	Text scoreTF;
 
 	// Use this for initialization
@@ -15,6 +15,7 @@ public class EnemyHealth : MonoBehaviour {
 		healthStatic = 5;
 		healthMov = 2;
 		healthShooter = 7;
+		healthBoss = 100;
 	}
 	
 	// Update is called once per frame
@@ -63,8 +64,14 @@ public class EnemyHealth : MonoBehaviour {
 
 				}
 			}
-
-
+			if (itsBoss) {
+				healthBoss--;
+				print (healthBoss);
+				if (healthBoss <= 0) {
+					Destroy (gameObject);
+					scoreTF.text = (int.Parse (scoreTF.text) + 100).ToString ();
+				}
+			}
 		}
 	}
 }

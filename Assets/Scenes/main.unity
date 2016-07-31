@@ -284,7 +284,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 256506248}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.5459085, y: -1.572015, z: 0}
+  m_LocalPosition: {x: -3.83, y: -10.53, z: 0}
   m_LocalScale: {x: 2.25, y: 2.25, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -1564,13 +1564,15 @@ MonoBehaviour:
   maxTime: 2
   spawnTimeShooter: 10
   timeinbetween: 15
-  totalEnemies: 2000
+  totalEnemies: 100
   totalShooters: 10
   asteroidPrefab: {fileID: 160838, guid: 5c495f0843b5cc54eb39fe92bcd00dec, type: 2}
   EnemyShooter: {fileID: 1000010142003794, guid: bc7fafc4559c38c43b6fbf1f52518dc6,
     type: 2}
+  Boss: {fileID: 1000010823698744, guid: 786e5dabdb097304cbf7b3656c5688bd, type: 2}
   doSpawn: 1
   doSpawnShooter: 1
+  doSpawnBoss: 1
 --- !u!4 &1889376751
 Transform:
   m_ObjectHideFlags: 0
