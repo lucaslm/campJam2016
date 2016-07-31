@@ -445,9 +445,14 @@ GameObject:
   m_Component:
   - 4: {fileID: 529007244}
   - 212: {fileID: 529007243}
+  - 95: {fileID: 529007249}
+  - 60: {fileID: 529007248}
+  - 114: {fileID: 529007247}
+  - 114: {fileID: 529007245}
+  - 50: {fileID: 529007250}
   m_Layer: 0
   m_Name: Power-Up-Laser_0
-  m_TagString: Untagged
+  m_TagString: Laser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -492,12 +497,99 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 529007242}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -12, y: 5.13, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
+--- !u!114 &529007245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 529007242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f64d20121eee2641b2227919fe1a2e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &529007247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 529007242}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ea9426d38471034eacb4953e8f77b79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  acceleration: 100
+--- !u!60 &529007248
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 529007242}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: -0.02, y: -0.14}
+      - {x: -0.049999997, y: -0.17}
+      - {x: -0.049999997, y: -0.19999999}
+      - {x: -0.02, y: -0.22999999}
+      - {x: 0.01, y: -0.22999999}
+      - {x: 0.04, y: -0.19999999}
+      - {x: 0.04, y: -0.17}
+      - {x: 0.01, y: -0.14}
+    - - {x: -0.13, y: 0.14}
+      - {x: -0.13, y: -0.03}
+      - {x: -0.06, y: -0.089999996}
+      - {x: 0.03, y: -0.089999996}
+      - {x: 0.089999996, y: -0.07}
+      - {x: 0.099999994, y: -0.02}
+      - {x: 0.099999994, y: 0.06}
+      - {x: 0.03, y: 0.14}
+--- !u!95 &529007249
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 529007242}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 762812ebee9be5d409131151693e43be, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!50 &529007250
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 529007242}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &709164772
 GameObject:
   m_ObjectHideFlags: 0
@@ -1180,6 +1272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   invincible: 0
+  readytofire: 0
   duration: 5
 --- !u!1 &1489105992
 GameObject:
@@ -1714,6 +1807,7 @@ MonoBehaviour:
   bottomBorder: {fileID: 1684194452}
   rightBorder: {fileID: 1724341967}
   nyan: {fileID: 1000012018574254, guid: 70e1e7ae826726e4295a9f23bc712fe7, type: 2}
+  laser: {fileID: 1000012635858664, guid: 2c550d8d1edc9de48858b2eb3286b08d, type: 2}
   meteor0: {fileID: 1000010021799790, guid: 3ad732c703fa3bc418f94e5290828693, type: 2}
   meteor1: {fileID: 1000013012741930, guid: 768ddf74875b5a84cafed8ff593e6901, type: 2}
   meteor2: {fileID: 1000013813184250, guid: 8d5d8ffddf2f5ef48a61977dc9bbda39, type: 2}
@@ -1724,7 +1818,7 @@ MonoBehaviour:
   maxTime: 2
   spawnTimeShooter: 10
   timeinbetween: 15
-  totalEnemies: 20
+  totalEnemies: 50
   totalShooters: 10
   doSpawn: 1
   doSpawnShooter: 1

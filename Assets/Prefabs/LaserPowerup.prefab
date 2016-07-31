@@ -20,13 +20,14 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000011940139264}
   - 212: {fileID: 212000012125319918}
+  - 95: {fileID: 95000010537939130}
+  - 60: {fileID: 60000010048520966}
   - 114: {fileID: 114000012263631774}
-  - 50: {fileID: 50000012953364858}
-  - 61: {fileID: 61000014030648754}
   - 114: {fileID: 114000013619187266}
-  - 114: {fileID: 114000010158331674}
+  - 50: {fileID: 50000012953364858}
+  - 114: {fileID: 114000010389407736}
   m_Layer: 0
-  m_Name: Laser Powerup
+  m_Name: LaserPowerup
   m_TagString: Laser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39,8 +40,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012635858664}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.56, y: 2.6, z: 0}
-  m_LocalScale: {x: 0.5444667, y: 0.16926588, z: 1}
+  m_LocalPosition: {x: -12, y: 5.13, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -62,8 +63,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &61000014030648754
-BoxCollider2D:
+--- !u!60 &60000010048520966
+PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -74,9 +75,42 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Size: {x: 2.668, y: 2.002}
---- !u!114 &114000010158331674
+  m_Points:
+    m_Paths:
+    - - {x: -0.02, y: -0.14}
+      - {x: -0.049999997, y: -0.17}
+      - {x: -0.049999997, y: -0.19999999}
+      - {x: -0.02, y: -0.22999999}
+      - {x: 0.01, y: -0.22999999}
+      - {x: 0.04, y: -0.19999999}
+      - {x: 0.04, y: -0.17}
+      - {x: 0.01, y: -0.14}
+    - - {x: -0.13, y: 0.14}
+      - {x: -0.13, y: -0.03}
+      - {x: -0.06, y: -0.089999996}
+      - {x: 0.03, y: -0.089999996}
+      - {x: 0.089999996, y: -0.07}
+      - {x: 0.099999994, y: -0.02}
+      - {x: 0.099999994, y: 0.06}
+      - {x: 0.03, y: 0.14}
+--- !u!95 &95000010537939130
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012635858664}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 762812ebee9be5d409131151693e43be, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114000010389407736
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -84,10 +118,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000012635858664}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ea9426d38471034eacb4953e8f77b79, type: 3}
+  m_Script: {fileID: 11500000, guid: a53a11e2137386143bf28fd5ec1c41e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceleration: 100
 --- !u!114 &114000012263631774
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -99,7 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ea9426d38471034eacb4953e8f77b79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceleration: 80
+  acceleration: 100
 --- !u!114 &114000013619187266
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -140,7 +173,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0b54759c4af426a4c850100ba354139b, type: 3}
-  m_Color: {r: 0.030709373, g: 0.87638104, b: 1, a: 1}
+  m_Sprite: {fileID: 21300006, guid: 0e7f3019a22763e4db315eaa398bc5c4, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

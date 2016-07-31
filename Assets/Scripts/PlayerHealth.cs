@@ -7,18 +7,16 @@ using UnityEngine.SceneManagement;
 public class PlayerHealth : MonoBehaviour {
 
 	Animator anim;
-	public bool invincible = false;
-	public bool readytofire=false;
-	public float duration=5.0f;
+	public bool invincible  = false;
+	public bool readytofire = false;
+	public float duration   = 5.0f;
 	float time;
 	Text scoreTF;
-	GameObject HitBoxLaser;
 
 	void Start() {
 		// Set a reference to the player's animations controller
 		anim = GetComponent<Animator>();
 		scoreTF = GameObject.Find ("ScoreLabel").GetComponents<Text> () [0];
-		HitBoxLaser = GameObject.Find ("HitBoxLaser");
 	}
 
 	void OnTriggerEnter2D (Collider2D other)
@@ -58,22 +56,9 @@ public class PlayerHealth : MonoBehaviour {
 			anim.SetBool ("invincible", false);
 		}
 
-		if (Input.GetKeyDown (KeyCode.R) && readytofire==true) {
+		if (Input.GetKeyDown (KeyCode.R) && readytofire) {
 
-			float LaserHeight = HitBoxLaser.GetComponent<Collider> ().bounds.extents [1];
-			print ("Shooting");
-
-			GameObject[] allObjects = GameObject.FindGameObjectsWithTag ("Enemy");
-			foreach (GameObject GO in allObjects) {
-				float GOHeight = GO.GetComponent<Renderer> ().bounds.extents [1];
-				boundPoint
-				print ("LaserHeight = "+LaserHeight);
-				print (Mathf.Abs(GO.transform.position.y - HitBoxLaser.transform.position.y));
-				if (GO.transform.position.x > HitBoxLaser.transform.position.x &&
-					Mathf.Abs(GO.transform.position.y - HitBoxLaser.transform.position.y) <= LaserHeight) {
-					Destroy (GO);
-				}
-			}		    
+			// TODO: make laser code	    
 			
 		}
 	}
