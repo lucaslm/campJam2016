@@ -1,0 +1,144 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1000014098535420}
+  m_IsPrefabParent: 1
+--- !u!1 &1000014098535420
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000012132669190}
+  - 82: {fileID: 82000012763380832}
+  - 114: {fileID: 114000010816728546}
+  m_Layer: 0
+  m_Name: SoundEffects
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4000012132669190
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014098535420}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.34, y: -7.41, z: -10}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!82 &82000012763380832
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014098535420}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 37ee1e11d77c3f54bb907707c9ab5f8c, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.62
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 115
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!114 &114000010816728546
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014098535420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cb307077d502a44390f8e4cb76b3289, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  song1: {fileID: 0}
+  songBoss: {fileID: 0}
+  nyan: {fileID: 8300000, guid: 1f0b5f4b75e1db84b88cee356fdc68cf, type: 3}
+  nyansong: {fileID: 0}
+  laserpick: {fileID: 8300000, guid: 1f0b5f4b75e1db84b88cee356fdc68cf, type: 3}
+  hit: {fileID: 0}
+  dead: {fileID: 8300000, guid: 5dac649c17debb4449e2a65f081dda92, type: 3}
+  kill: {fileID: 8300000, guid: 2b1d8dd7c3a548e4da5d57e5f30d1404, type: 3}
+  lasershot: {fileID: 8300000, guid: 7ba66e378a4cb7143bb20c2479564a53, type: 3}
+  playershot: {fileID: 8300000, guid: 9577165016f01404d8ba1e9c3d6f10d1, type: 3}
+  enemyshot: {fileID: 8300000, guid: bff7a9e68b322024a95ad6672041b2eb, type: 3}
+  bossprojectile: {fileID: 8300000, guid: 0860874bf10fb5e46a576d62bc76ccd0, type: 3}
+  bosscharge: {fileID: 8300000, guid: 715cc1c88e43bfa49a457448bf9e7bd7, type: 3}
+  dieboss: {fileID: 8300000, guid: 7796b69932ccc6c4babf3a9251d7e63c, type: 3}
+  victory: {fileID: 8300000, guid: 24dd6de17732f90469b3a3bb2d5c1e53, type: 3}
+  final: {fileID: 8300000, guid: 63d05f70b16ec6349b357409a79f3cf0, type: 3}

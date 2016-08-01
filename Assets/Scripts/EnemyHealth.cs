@@ -3,9 +3,11 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class EnemyHealth : MonoBehaviour {
-	int healthShooter, healthStatic, healthMov;
-	public bool itsShooter, itsStatic, itsMov;
+	int healthShooter, healthStatic, healthMov, healthBoss;
+	public bool itsShooter, itsStatic, itsMov, itsBoss;
 	Text scoreTF;
+	public GameObject sound;
+	GameObject effect;
 
 	// Use this for initialization
 	void Start () {
@@ -15,28 +17,23 @@ public class EnemyHealth : MonoBehaviour {
 		healthStatic = 5;
 		healthMov = 2;
 		healthShooter = 7;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-//		print (healthStatic);
+    healthBoss = 100;
 	}
 
 	void OnTriggerEnter2D(Collider2D coll)
 	{
-	//	if(coll.tag == "Player")
-	//	{
-	//		Destroy (coll.gameObject);
-	//  }else 
 		if(coll.tag == "PlayerShot")
 		{
-			//print ("é tiroo");
+			effect = Instantiate (sound, new Vector3 (0, 0, 0), Quaternion.identity) as GameObject;
+			effect.GetComponent<Songchoice> ().Choice (2); 
 			if(itsShooter)
 			{
 				healthShooter--;
 				if(healthShooter <= 0)
 				{
 					Destroy (gameObject);
+					effect = Instantiate (sound, new Vector3 (0, 0, 0), Quaternion.identity) as GameObject;
+					effect.GetComponent<Songchoice> ().Choice (4);
 					scoreTF.text = (int.Parse (scoreTF.text) + 3).ToString ();
 				}
 			}
@@ -44,27 +41,39 @@ public class EnemyHealth : MonoBehaviour {
 			{
 				
 				healthMov--;
-				print (healthMov + "alomov");
 				if(healthMov <=0)
 				{
 					Destroy (gameObject);
+					effect = Instantiate (sound, new Vector3 (0, 0, 0), Quaternion.identity) as GameObject;
+					effect.GetComponent<Songchoice> ().Choice (4);
 					scoreTF.text = (int.Parse (scoreTF.text) + 2).ToString ();
 				}
 			}
 			if(itsStatic)
 			{
 				healthStatic--;
-				print (healthStatic);
 				if(healthStatic <= 0)
 				{
-					print ("menos 0");
 					Destroy (gameObject);
+					effect = Instantiate (sound, new Vector3 (0, 0, 0), Quaternion.identity) as GameObject;
+					effect.GetComponent<Songchoice> ().Choice (4);
 					scoreTF.text = (int.Parse (scoreTF.text) + 1).ToString ();
-
 				}
 			}
-
-
+			if (itsBoss) {
+				healthBoss--;
+				print (healthBoss);
+				if (healthBoss <= 0) {
+					Destroy (gameObject);
+					effect = Instantiate (sound, new Vector3 (0, 0, 0), Quaternion.identity) as GameObject;
+					effect.GetComponent<Songchoice> ().Choice (10);
+					effect = Instantiate (sound, new Vector3 (0, 0, 0), Quaternion.identity) as GameObject;
+					effect.GetComponent<Songchoice> ().Choice (11);
+					effect = Instantiate (sound, new Vector3 (0, 0, 0), Quaternion.identity) as GameObject;
+					effect.GetComponent<Songchoice> ().Choice (12);
+					scoreTF.text = (int.Parse (scoreTF.text) + 100).ToString ();
+				}
+			}
 		}
 	}
 }

@@ -7,11 +7,14 @@ public class PlayerHealth : MonoBehaviour {
 
 	Animator anim, animaLaser;
 	public GameObject Steven;
+	public bool readytofire = false;
 	public bool invincible = false;
 	public bool hasLaser = false;
 	public float duration=5.0f;
 	float time;
 	Text scoreTF;
+	public GameObject sound;
+	GameObject effect;
 
 	void Start() {
 		// Set a reference to the player's animations controller
@@ -26,6 +29,8 @@ public class PlayerHealth : MonoBehaviour {
 
 			if (invincible == false) {
 				Destroy (gameObject);
+				effect = Instantiate (sound, new Vector3 (0, 0, 0), Quaternion.identity) as GameObject;
+				effect.GetComponent<Songchoice> ().Choice (3);
 				SceneManager.LoadScene ("main");
 			} 
 			else {
@@ -36,7 +41,7 @@ public class PlayerHealth : MonoBehaviour {
 		
 	//Invincibility
 	public void setInvincible(){
-		
+		GameObject.Find ("Music(Clone)").GetComponent<Songchoice> ().Song(2, duration); //Nyan Song
 		invincible = true;
 		anim.SetBool("invincible", true);
 		time = 0;
@@ -47,16 +52,16 @@ public class PlayerHealth : MonoBehaviour {
 		anim.SetBool("Shooting", true);
 		animaLaser.SetBool ("Shooting", true);
 		anim.SetBool ("laserFire",true);
-		Steven.SetActive (true);
-		print (hasLaser);
+		//Steven.SetActive (true);
+		//print (hasLaser);
 	}
 	public void setLaserOff(){
 		hasLaser = false;
 		anim.SetBool("Shooting", false);
 		animaLaser.SetBool ("Shooting", false);
 		anim.SetBool ("laserFire",false);
-		Steven.SetActive (false);
-	//	print (hasLaser);
+		//Steven.SetActive (false);
+	  //print (hasLaser);
 	}
 
 	void Update(){
@@ -74,7 +79,16 @@ public class PlayerHealth : MonoBehaviour {
 		time += Time.deltaTime;
 		if (time >= duration && invincible == true) {
 			invincible = false;
+			GameObject.Find ("Music(Clone)").GetComponent<Songchoice> ().Song(0, duration); //Back to normal song.
 			anim.SetBool("invincible", false);
+			if (Input.GetKeyDown (KeyCode.R) && readytofire) {
+
+				effect = Instantiate (sound, new Vector3 (0, 0, 0), Quaternion.identity) as GameObject;
+				effect.GetComponent<Songchoice> ().Choice (5);
+
+				// TODO: make laser code	    
+
+			}
 		}
 	}
 }
