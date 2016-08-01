@@ -1,15 +1,16 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour {
 
-	Animator anim;
-	public bool invincible  = false;
+	Animator anim, animaLaser;
+	public GameObject Steven;
 	public bool readytofire = false;
-	public float duration   = 5.0f;
+	public bool invincible = false;
+	public bool hasLaser = false;
+	public float duration=5.0f;
 	float time;
 	Text scoreTF;
 	public GameObject sound;
@@ -18,12 +19,12 @@ public class PlayerHealth : MonoBehaviour {
 	void Start() {
 		// Set a reference to the player's animations controller
 		anim = GetComponent<Animator>();
+		animaLaser = GetComponentInChildren<Animator> ();
 		scoreTF = GameObject.Find ("ScoreLabel").GetComponents<Text> () [0];
 	}
-
 	void OnTriggerEnter2D (Collider2D other)
 	{
-		if (other.tag == "Enemy" || other.tag == "EnemyShooter" || other.tag == "EnemyShot" && other.name != "Boss(Clone)"){
+		if (other.tag == "Enemy" || other.tag == "EnemyShooter" || other.tag == "EnemyShot"){
 			Destroy (other.gameObject);
 
 			if (invincible == false) {
@@ -40,35 +41,54 @@ public class PlayerHealth : MonoBehaviour {
 		
 	//Invincibility
 	public void setInvincible(){
-
 		GameObject.Find ("Music(Clone)").GetComponent<Songchoice> ().Song(2, duration); //Nyan Song
 		invincible = true;
 		anim.SetBool("invincible", true);
 		time = 0;
 
-	} 
-
-	public void setlaser(){
-
-		readytofire = true;
-
+	}
+	public void setLaserOn(){
+		hasLaser = true;
+		anim.SetBool("Shooting", true);
+		animaLaser.SetBool ("Shooting", true);
+		anim.SetBool ("laserFire",true);
+		//Steven.SetActive (true);
+		//print (hasLaser);
+	}
+	public void setLaserOff(){
+		hasLaser = false;
+		anim.SetBool("Shooting", false);
+		animaLaser.SetBool ("Shooting", false);
+		anim.SetBool ("laserFire",false);
+		//Steven.SetActive (false);
+	  //print (hasLaser);
 	}
 
 	void Update(){
+
+
+		if(Input.GetKeyDown (KeyCode.R))
+		{
+			setLaserOn ();
+			print ("Ativou");
+		}
+		if(Input.GetKeyDown(KeyCode.T))
+		{
+			setLaserOff ();
+		}
 		time += Time.deltaTime;
 		if (time >= duration && invincible == true) {
-			anim.SetBool ("invincible", false);
 			invincible = false;
 			GameObject.Find ("Music(Clone)").GetComponent<Songchoice> ().Song(0, duration); //Back to normal song.
-		}
+			anim.SetBool("invincible", false);
+			if (Input.GetKeyDown (KeyCode.R) && readytofire) {
 
-		if (Input.GetKeyDown (KeyCode.R) && readytofire) {
+				effect = Instantiate (sound, new Vector3 (0, 0, 0), Quaternion.identity) as GameObject;
+				effect.GetComponent<Songchoice> ().Choice (5);
 
-			effect = Instantiate (sound, new Vector3 (0, 0, 0), Quaternion.identity) as GameObject;
-			effect.GetComponent<Songchoice> ().Choice (5);
+				// TODO: make laser code	    
 
-			// TODO: make laser code	    
-			
+			}
 		}
 	}
 }

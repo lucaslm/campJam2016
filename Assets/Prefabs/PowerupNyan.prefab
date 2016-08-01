@@ -26,7 +26,7 @@ GameObject:
   - 114: {fileID: 114000012385104604}
   - 95: {fileID: 95000013283069314}
   m_Layer: 0
-  m_Name: NyanPowerup
+  m_Name: PowerupNyan
   m_TagString: Nyan
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

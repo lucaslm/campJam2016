@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 38f88d212c478544c9b65ba68bd67fb0
-timeCreated: 1469913548
+guid: 00de895176dd3ec4885108f3dd573aa8
+timeCreated: 1469991807
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -14,12 +14,6 @@ TextureImporter:
     21300014: Lazer-beam_7
     21300016: Lazer-beam_8
     21300018: Lazer-beam_9
-    21300020: Lazer-beam_10
-    21300022: Lazer-beam_11
-    21300024: Lazer-beam_12
-    21300026: Lazer-beam_13
-    21300028: Lazer-beam_14
-    21300030: Lazer-beam_15
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -191,84 +185,6 @@ TextureImporter:
         serializedVersion: 2
         x: 256
         y: 256
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Lazer-beam_10
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 256
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Lazer-beam_11
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 256
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Lazer-beam_12
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Lazer-beam_13
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 0
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Lazer-beam_14
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 0
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Lazer-beam_15
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 0
         width: 256
         height: 256
       alignment: 0

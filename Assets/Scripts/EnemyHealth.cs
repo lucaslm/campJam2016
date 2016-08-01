@@ -9,7 +9,6 @@ public class EnemyHealth : MonoBehaviour {
 	public GameObject sound;
 	GameObject effect;
 
-
 	// Use this for initialization
 	void Start () {
 		scoreTF = GameObject.Find ("ScoreLabel").GetComponents<Text> () [0];
@@ -18,17 +17,15 @@ public class EnemyHealth : MonoBehaviour {
 		healthStatic = 5;
 		healthMov = 2;
 		healthShooter = 7;
-		healthBoss = 100;
+    healthBoss = 100;
 	}
 
 	void OnTriggerEnter2D(Collider2D coll)
 	{
 		if(coll.tag == "PlayerShot")
 		{
-
 			effect = Instantiate (sound, new Vector3 (0, 0, 0), Quaternion.identity) as GameObject;
 			effect.GetComponent<Songchoice> ().Choice (2); 
-
 			if(itsShooter)
 			{
 				healthShooter--;
@@ -49,7 +46,6 @@ public class EnemyHealth : MonoBehaviour {
 					Destroy (gameObject);
 					effect = Instantiate (sound, new Vector3 (0, 0, 0), Quaternion.identity) as GameObject;
 					effect.GetComponent<Songchoice> ().Choice (4);
-					Destroy (effect);
 					scoreTF.text = (int.Parse (scoreTF.text) + 2).ToString ();
 				}
 			}
@@ -75,7 +71,6 @@ public class EnemyHealth : MonoBehaviour {
 					effect.GetComponent<Songchoice> ().Choice (11);
 					effect = Instantiate (sound, new Vector3 (0, 0, 0), Quaternion.identity) as GameObject;
 					effect.GetComponent<Songchoice> ().Choice (12);
-
 					scoreTF.text = (int.Parse (scoreTF.text) + 100).ToString ();
 				}
 			}

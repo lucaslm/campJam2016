@@ -131,7 +131,7 @@ MonoBehaviour:
   nyan: {fileID: 8300000, guid: 1f0b5f4b75e1db84b88cee356fdc68cf, type: 3}
   nyansong: {fileID: 0}
   laserpick: {fileID: 8300000, guid: 1f0b5f4b75e1db84b88cee356fdc68cf, type: 3}
-  hit: {fileID: 8300000, guid: ad18ccfb0b4ef2a438a75720dd702500, type: 3}
+  hit: {fileID: 0}
   dead: {fileID: 8300000, guid: 5dac649c17debb4449e2a65f081dda92, type: 3}
   kill: {fileID: 8300000, guid: 2b1d8dd7c3a548e4da5d57e5f30d1404, type: 3}
   lasershot: {fileID: 8300000, guid: 7ba66e378a4cb7143bb20c2479564a53, type: 3}
