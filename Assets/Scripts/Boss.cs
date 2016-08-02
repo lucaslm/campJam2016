@@ -6,11 +6,22 @@ public class Boss : MonoBehaviour {
 	Vector3 finalposition;
 	Vector3 bottomposition;
 	public float maxy= 3.5f;
+	Animator bossAnimator;
+	AnimationClip deathAnimation;
 
 	void Start(){
 
 		finalposition = new Vector3 (transform.position.x, maxy, 0);
 		bottomposition = new Vector3 (transform.position.x, -maxy, 0);
+
+		bossAnimator = gameObject.GetComponent<Animator>();
+		foreach (AnimationClip clip in bossAnimator.runtimeAnimatorController.animationClips) {
+			print(clip.name);
+			// TODO: Find out how to change animation clip name from dsd to BossDiyng on scene
+			if (clip.name == "BossDiyng" || clip.name == "dsd") {
+				deathAnimation = clip;
+			}
+		}
 
 		StartCoroutine (up ());
 
@@ -39,11 +50,8 @@ public class Boss : MonoBehaviour {
 	 */
 	public IEnumerator Die()
 	{
-		Animator enemyAnimator = GetComponent<Animator>();
-		enemyAnimator.SetTrigger("BossDeath");
-		yield return new WaitForEndOfFrame();
-		float duration = enemyAnimator.GetCurrentAnimatorClipInfo(0).Length;
-		yield return new WaitForSeconds(duration);
+		bossAnimator.SetTrigger("BossDeath");
+		yield return new WaitForSeconds(deathAnimation.length);
 		Destroy(gameObject);
 	}
 
