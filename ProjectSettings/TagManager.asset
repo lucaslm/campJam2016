@@ -4,14 +4,15 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Enemy
   - Nyan
-  - Star
+  - Laser
   - PlayerShot
   - EnemyShot
   - EnemyShooter
-  - EnemyMov
+  - EnemyStatic
   - LaserPickUp
+  - EnemyDynamic
+  - EnemyBoss
   layers:
   - Default
   - TransparentFX

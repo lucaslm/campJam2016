@@ -25,6 +25,7 @@ GameObject:
   - 114: {fileID: 114000013230631384}
   - 114: {fileID: 114000013548173782}
   - 50: {fileID: 50000010989790026}
+  - 114: {fileID: 114000010082517470}
   m_Layer: 0
   m_Name: PowerupLaser
   m_TagString: Laser
@@ -109,6 +110,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114000010082517470
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011565628864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a53a11e2137386143bf28fd5ec1c41e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000013230631384
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -27,7 +27,7 @@ GameObject:
   - 60: {fileID: 60000010465034988}
   m_Layer: 0
   m_Name: meteorPrefab1
-  m_TagString: Enemy
+  m_TagString: EnemyStatic
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,11 +100,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0cfb9e11b8d6c24e87519ee376f3d72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itsShooter: 0
-  itsStatic: 1
-  itsMov: 0
-  itsBoss: 0
   sound: {fileID: 1000014098535420, guid: 01345b03cfe6c634da7d63e9c06c488a, type: 2}
+  healthPoints: 5
 --- !u!114 &114000013334572876
 MonoBehaviour:
   m_ObjectHideFlags: 1

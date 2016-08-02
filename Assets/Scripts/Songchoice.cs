@@ -6,12 +6,12 @@ public class Songchoice : MonoBehaviour {
 
 	public AudioClip song1, songBoss, nyan, nyansong, laserpick, hit, dead, kill, lasershot, playershot, enemyshot;
 	public AudioClip bossprojectile, bosscharge, dieboss, victory, final;
-	private AudioSource audio;
+	private AudioSource audioSrc;
 	float resumeTime;
 
 
 	void Awake(){
-		audio = GetComponent<AudioSource> ();
+		audioSrc = GetComponent<AudioSource> ();
 	}
 
 	public void Choice(int choice){
@@ -19,60 +19,60 @@ public class Songchoice : MonoBehaviour {
 
 		switch (choice) {
 		case 0:
-			audio.clip = nyan;
+			audioSrc.clip = nyan;
 			dur = 1.0f;
 			break;
 		case 1:
-			audio.clip = laserpick;
+			audioSrc.clip = laserpick;
 			dur = 1.0f;
 			break;
 		case 2:
-			audio.clip = hit;
+			audioSrc.clip = hit;
 			dur=1.0f;
 			break;
 		case 3:
-			audio.clip = dead;
+			audioSrc.clip = dead;
 			dur=1.0f;
 			break;
 		case 4:
-			audio.clip = kill;
+			audioSrc.clip = kill;
 			dur = 3.0f;
 			break;
 		case 5:
-			audio.clip = lasershot;
+			audioSrc.clip = lasershot;
 			dur = 7.0f;
 			break;
 		case 6:
-			audio.clip = playershot;
+			audioSrc.clip = playershot;
 			dur = 1.0f;
 			break;
 		case 7:
-			audio.clip = enemyshot;
+			audioSrc.clip = enemyshot;
 			dur = 1.0f;
 			break;
 		case 8:
-			audio.clip = bosscharge;
+			audioSrc.clip = bosscharge;
 			dur = 1.0f;
 			break;
 		case 9:
-			audio.clip = bossprojectile;
+			audioSrc.clip = bossprojectile;
 			dur = 1.0f;
 			break;
 		case 10:
-			audio.clip = dieboss;
-				dur = 2.0f;
+			audioSrc.clip = dieboss;
+			dur = 2.0f;
 			break;
 		case 11:
-			audio.clip = victory;
+			audioSrc.clip = victory;
 			dur = 3.0f;
 			break;
 		case 12:
-			audio.clip = final;
+			audioSrc.clip = final;
 			dur = 4.0f;
 			break;
 		
 		}
-		audio.Play ();
+		audioSrc.Play ();
 		StartCoroutine (cutsound(dur));
 	}
 
@@ -80,24 +80,25 @@ public class Songchoice : MonoBehaviour {
 
 	IEnumerator cutsound(float dur){
 		yield return new WaitForSeconds (dur);
+		Destroy (gameObject);
 		Destroy (this);
 	}
 
 	public void Song(int song, float duration){
 		switch (song) {
 		case 0:
-			audio.clip = song1;
-			audio.time = resumeTime;
+			audioSrc.clip = song1;
+			audioSrc.time = resumeTime;
 			break;
 		case 1:
-			audio.clip = songBoss;
+			audioSrc.clip = songBoss;
 			break;
 		case 2:
-			resumeTime = audio.time+duration;
-			audio.clip = nyansong;
+			resumeTime = audioSrc.time+duration;
+			audioSrc.clip = nyansong;
 			break;
 		}
-		audio.Play();
+		audioSrc.Play();
 	}
 
 }

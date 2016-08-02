@@ -142,11 +142,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0cfb9e11b8d6c24e87519ee376f3d72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itsShooter: 1
-  itsStatic: 0
-  itsMov: 0
-  itsBoss: 0
   sound: {fileID: 1000014098535420, guid: 01345b03cfe6c634da7d63e9c06c488a, type: 2}
+  healthPoints: 7
 --- !u!114 &114000011110977532
 MonoBehaviour:
   m_ObjectHideFlags: 1

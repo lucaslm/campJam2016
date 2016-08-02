@@ -7,7 +7,7 @@ public class PlayerHealth : MonoBehaviour {
 
 	Animator anim, animaLaser;
 	public GameObject Steven;
-	public bool readytofire = false;
+	public bool readyToFire = false;
 	public bool invincible = false;
 	public bool hasLaser = false;
 	public float duration=5.0f;
@@ -22,24 +22,28 @@ public class PlayerHealth : MonoBehaviour {
 		animaLaser = GetComponentInChildren<Animator> ();
 		scoreTF = GameObject.Find ("ScoreLabel").GetComponents<Text> () [0];
 	}
+
 	void OnTriggerEnter2D (Collider2D other)
 	{
-		if (other.tag == "Enemy" || other.tag == "EnemyShooter" || other.tag == "EnemyShot"){
+		// Whenever the player is touched by an enemy or enemy shot
+		if (other.tag.Contains("Enemy")) {
 			Destroy (other.gameObject);
 
-			if (invincible == false) {
+			// If invincible, a point is given
+			if (invincible) {
+				scoreTF.text = (int.Parse (scoreTF.text) + 1).ToString ();
+			}
+			// otherwise he dies
+			else {
 				Destroy (gameObject);
 				effect = Instantiate (sound, new Vector3 (0, 0, 0), Quaternion.identity) as GameObject;
 				effect.GetComponent<Songchoice> ().Choice (3);
 				SceneManager.LoadScene ("main");
-			} 
-			else {
-				scoreTF.text = (int.Parse (scoreTF.text) + 1).ToString ();
 			}
 		}
 	}
-		
-	//Invincibility
+
+	// Invincibility
 	public void setInvincible(){
 		GameObject.Find ("Music(Clone)").GetComponent<Songchoice> ().Song(2, duration); //Nyan Song
 		invincible = true;
@@ -53,7 +57,6 @@ public class PlayerHealth : MonoBehaviour {
 		animaLaser.SetBool ("Shooting", true);
 		anim.SetBool ("laserFire",true);
 		//Steven.SetActive (true);
-		//print (hasLaser);
 	}
 	public void setLaserOff(){
 		hasLaser = false;
@@ -61,7 +64,6 @@ public class PlayerHealth : MonoBehaviour {
 		animaLaser.SetBool ("Shooting", false);
 		anim.SetBool ("laserFire",false);
 		//Steven.SetActive (false);
-	  //print (hasLaser);
 	}
 
 	void Update(){
@@ -81,7 +83,7 @@ public class PlayerHealth : MonoBehaviour {
 			invincible = false;
 			GameObject.Find ("Music(Clone)").GetComponent<Songchoice> ().Song(0, duration); //Back to normal song.
 			anim.SetBool("invincible", false);
-			if (Input.GetKeyDown (KeyCode.R) && readytofire) {
+			if (Input.GetKeyDown (KeyCode.R) && readyToFire) {
 
 				effect = Instantiate (sound, new Vector3 (0, 0, 0), Quaternion.identity) as GameObject;
 				effect.GetComponent<Songchoice> ().Choice (5);

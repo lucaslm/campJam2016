@@ -25,6 +25,7 @@ GameObject:
   - 114: {fileID: 114000010921826028}
   - 114: {fileID: 114000012385104604}
   - 95: {fileID: 95000013283069314}
+  - 114: {fileID: 114000012317717140}
   m_Layer: 0
   m_Name: PowerupNyan
   m_TagString: Nyan
@@ -114,6 +115,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   acceleration: 100
+--- !u!114 &114000012317717140
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012018574254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a53a11e2137386143bf28fd5ec1c41e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000012385104604
 MonoBehaviour:
   m_ObjectHideFlags: 1

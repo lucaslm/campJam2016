@@ -25,6 +25,7 @@ GameObject:
   - 114: {fileID: 114000013171145686}
   - 114: {fileID: 114000011031677860}
   - 50: {fileID: 50000011536108678}
+  - 114: {fileID: 114000013254311130}
   m_Layer: 0
   m_Name: ProjectilePlayer
   m_TagString: PlayerShot
@@ -111,10 +112,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000012470802064}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ded571e8d200de49bcb70fb44e95e0b, type: 3}
+  m_Script: {fileID: 11500000, guid: a53a11e2137386143bf28fd5ec1c41e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fail: 3
 --- !u!114 &114000013171145686
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -127,6 +127,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   acceleration: -2000
+--- !u!114 &114000013254311130
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012470802064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3beec876bfc5944590bc8633112e442, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fail: 5
 --- !u!212 &212000011623967602
 SpriteRenderer:
   m_ObjectHideFlags: 1

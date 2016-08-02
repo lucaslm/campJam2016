@@ -27,7 +27,7 @@ GameObject:
   - 114: {fileID: 114000014226238948}
   m_Layer: 0
   m_Name: EnemyBoss
-  m_TagString: Enemy
+  m_TagString: EnemyBoss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -157,11 +157,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0cfb9e11b8d6c24e87519ee376f3d72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itsShooter: 0
-  itsStatic: 0
-  itsMov: 0
-  itsBoss: 1
   sound: {fileID: 1000014098535420, guid: 01345b03cfe6c634da7d63e9c06c488a, type: 2}
+  healthPoints: 100
 --- !u!114 &114000014226238948
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -173,6 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06da968943175a24db549a7540fe8dee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxy: 3.5
 --- !u!212 &212000010559689098
 SpriteRenderer:
   m_ObjectHideFlags: 1

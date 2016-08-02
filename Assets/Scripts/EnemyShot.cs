@@ -22,7 +22,7 @@ public class EnemyShot : MonoBehaviour {
 		while(anao > 0)
 		{	
 			yield return new WaitForSeconds (tempoEspera);
-		Instantiate (bullet, new Vector3(transform.position.x -1.5f, transform.position.y -0.5f, 0),
+			Instantiate (bullet, new Vector3(transform.position.x -1.5f, transform.position.y -0.5f, 0),
 				Quaternion.identity);
 			
 			tempoEspera += 0.4f;
