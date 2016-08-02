@@ -21,10 +21,10 @@ GameObject:
   - 4: {fileID: 4000010042909114}
   - 212: {fileID: 212000010559689098}
   - 50: {fileID: 50000014265845000}
-  - 114: {fileID: 114000010905241656}
   - 60: {fileID: 60000013347614568}
   - 95: {fileID: 95000011141490312}
   - 114: {fileID: 114000014226238948}
+  - 114: {fileID: 114000012322968636}
   m_Layer: 0
   m_Name: EnemyBoss
   m_TagString: EnemyBoss
@@ -146,7 +146,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114000010905241656
+--- !u!114 &114000012322968636
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000014247289902}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0cfb9e11b8d6c24e87519ee376f3d72, type: 3}
+  m_Script: {fileID: 11500000, guid: 7322d949de6606d4ca126c324b7ff3a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sound: {fileID: 1000014098535420, guid: 01345b03cfe6c634da7d63e9c06c488a, type: 2}
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000014247289902}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06da968943175a24db549a7540fe8dee, type: 3}
+  m_Script: {fileID: 11500000, guid: 0fca7fc9c7953534eb7cfcab843da78b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxy: 3.5

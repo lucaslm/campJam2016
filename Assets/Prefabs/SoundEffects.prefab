@@ -140,5 +140,5 @@ MonoBehaviour:
   bossprojectile: {fileID: 8300000, guid: 0860874bf10fb5e46a576d62bc76ccd0, type: 3}
   bosscharge: {fileID: 8300000, guid: 715cc1c88e43bfa49a457448bf9e7bd7, type: 3}
   dieboss: {fileID: 8300000, guid: 7796b69932ccc6c4babf3a9251d7e63c, type: 3}
-  victory: {fileID: 8300000, guid: 24dd6de17732f90469b3a3bb2d5c1e53, type: 3}
-  final: {fileID: 8300000, guid: 63d05f70b16ec6349b357409a79f3cf0, type: 3}
+  victory: {fileID: 0}
+  final: {fileID: 0}

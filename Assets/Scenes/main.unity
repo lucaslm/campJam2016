@@ -818,10 +818,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 923461683}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06da968943175a24db549a7540fe8dee, type: 3}
+  m_Script: {fileID: 11500000, guid: 7322d949de6606d4ca126c324b7ff3a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxy: 3.5
+  sound: {fileID: 1000014098535420, guid: 01345b03cfe6c634da7d63e9c06c488a, type: 2}
+  healthPoints: 100
 --- !u!95 &923461686
 Animator:
   serializedVersion: 3
@@ -847,11 +848,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 923461683}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0cfb9e11b8d6c24e87519ee376f3d72, type: 3}
+  m_Script: {fileID: 11500000, guid: 0fca7fc9c7953534eb7cfcab843da78b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound: {fileID: 1000014098535420, guid: 01345b03cfe6c634da7d63e9c06c488a, type: 2}
-  healthPoints: 100
+  maxy: 3.5
 --- !u!60 &923461688
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1527,7 +1527,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Steven: {fileID: 0}
-  readyToFire: 0
   invincible: 0
   hasLaser: 0
   duration: 5
@@ -2323,7 +2322,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2131067073}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0cfb9e11b8d6c24e87519ee376f3d72, type: 3}
+  m_Script: {fileID: 11500000, guid: 7322d949de6606d4ca126c324b7ff3a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sound: {fileID: 1000014098535420, guid: 01345b03cfe6c634da7d63e9c06c488a, type: 2}

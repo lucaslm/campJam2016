@@ -60,15 +60,7 @@ public class Songchoice : MonoBehaviour {
 			break;
 		case 10:
 			audioSrc.clip = dieboss;
-			dur = 2.0f;
-			break;
-		case 11:
-			audioSrc.clip = victory;
-			dur = 3.0f;
-			break;
-		case 12:
-			audioSrc.clip = final;
-			dur = 4.0f;
+			dur = 6.0f;
 			break;
 		
 		}
@@ -84,8 +76,8 @@ public class Songchoice : MonoBehaviour {
 		Destroy (this);
 	}
 
-	public void Song(int song, float duration){
-		switch (song) {
+	public void Song(int music, float duration){
+		switch (music) {
 		case 0:
 			audioSrc.clip = song1;
 			audioSrc.time = resumeTime;
@@ -97,8 +89,15 @@ public class Songchoice : MonoBehaviour {
 			resumeTime = audioSrc.time+duration;
 			audioSrc.clip = nyansong;
 			break;
+		case 3:
+			audioSrc.clip = victory;
+			audioSrc.loop = false;
+			break;
+		case 4:
+			audioSrc.clip = final;
+			break;
 		}
-		audioSrc.Play();
+			audioSrc.Play ();
 	}
 
 }

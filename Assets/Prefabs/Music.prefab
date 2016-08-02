@@ -135,3 +135,10 @@ MonoBehaviour:
   dead: {fileID: 0}
   kill: {fileID: 0}
   lasershot: {fileID: 0}
+  playershot: {fileID: 0}
+  enemyshot: {fileID: 0}
+  bossprojectile: {fileID: 0}
+  bosscharge: {fileID: 0}
+  dieboss: {fileID: 0}
+  victory: {fileID: 8300000, guid: 24dd6de17732f90469b3a3bb2d5c1e53, type: 3}
+  final: {fileID: 8300000, guid: 63d05f70b16ec6349b357409a79f3cf0, type: 3}

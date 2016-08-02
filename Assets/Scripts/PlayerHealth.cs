@@ -7,7 +7,6 @@ public class PlayerHealth : MonoBehaviour {
 
 	Animator anim, animaLaser;
 	public GameObject Steven;
-	public bool readyToFire = false;
 	public bool invincible = false;
 	public bool hasLaser = false;
 	public float duration=5.0f;
@@ -81,17 +80,20 @@ public class PlayerHealth : MonoBehaviour {
 		time += Time.deltaTime;
 		if (time >= duration && invincible == true) {
 			invincible = false;
-			GameObject.Find ("Music(Clone)").GetComponent<Songchoice> ().Song(0, duration); //Back to normal song.
-			anim.SetBool("invincible", false);
-			if (Input.GetKeyDown (KeyCode.R) && readyToFire) {
+			GameObject.Find ("Music(Clone)").GetComponent<Songchoice> ().Song (0, duration); //Back to normal song.
+			anim.SetBool ("invincible", false);
 
-				effect = Instantiate (sound, new Vector3 (0, 0, 0), Quaternion.identity) as GameObject;
-				effect.GetComponent<Songchoice> ().Choice (5);
+		}
 
-				// TODO: make laser code	    
+		if (Input.GetKeyDown (KeyCode.R) && hasLaser) {
+
+			effect = Instantiate (sound, new Vector3 (0, 0, 0), Quaternion.identity) as GameObject;
+			effect.GetComponent<Songchoice> ().Choice (5);
+
+			// TODO: make laser code	    
 
 			}
-		}
+		
 	}
 }
 

@@ -30,17 +30,18 @@ public class Boss : MonoBehaviour {
 	IEnumerator up(){
 		while (transform.position != finalposition) {
 			transform.position = Vector3.MoveTowards (transform.position, finalposition, Time.deltaTime * 3f);
-			yield return new WaitForSeconds (1.5f);
-			StartCoroutine (Down ());
+			yield return new WaitForSeconds (0.05f);
 		}
+		StartCoroutine (Down ());
+
 	}
 
 	IEnumerator Down(){
 		while(transform.position != bottomposition){
 			transform.position = Vector3.MoveTowards (transform.position, bottomposition, Time.deltaTime * 3f);
-			yield return new WaitForSeconds (1.5f);
-			StartCoroutine (up ());
+			yield return new WaitForSeconds (0.05f);
 		}
+		StartCoroutine (up ());
 
 
 	}

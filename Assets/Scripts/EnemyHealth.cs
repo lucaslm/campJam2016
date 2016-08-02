@@ -63,12 +63,11 @@ public class EnemyHealth : MonoBehaviour {
 						// Start corrotine to animate its death, and disable colisions so we only play it once
 						gameObject.GetComponent<PolygonCollider2D>().isTrigger = false;
 						StartCoroutine(gameObject.GetComponent<Boss> ().Die());
+
 						effect = Instantiate (sound, new Vector3 (0, 0, 0), Quaternion.identity) as GameObject;
 						effect.GetComponent<Songchoice> ().Choice (10);
-						effect = Instantiate (sound, new Vector3 (0, 0, 0), Quaternion.identity) as GameObject;
-						effect.GetComponent<Songchoice> ().Choice (11);
-						effect = Instantiate (sound, new Vector3 (0, 0, 0), Quaternion.identity) as GameObject;
-						effect.GetComponent<Songchoice> ().Choice (12);
+						GameObject.Find ("Music(Clone)").GetComponent<Songchoice> ().Song (3, 1); //Victory
+
 
 						scoreTF.text = (int.Parse (scoreTF.text) + 100).ToString ();
 					}

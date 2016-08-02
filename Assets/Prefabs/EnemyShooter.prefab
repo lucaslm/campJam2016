@@ -26,6 +26,7 @@ GameObject:
   - 114: {fileID: 114000013549303336}
   - 114: {fileID: 114000011110977532}
   - 114: {fileID: 114000010700144778}
+  - 114: {fileID: 114000013132640632}
   m_Layer: 0
   m_Name: EnemyShooter
   m_TagString: EnemyShooter
@@ -139,7 +140,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000010717139190}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0cfb9e11b8d6c24e87519ee376f3d72, type: 3}
+  m_Script: {fileID: 11500000, guid: 7322d949de6606d4ca126c324b7ff3a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sound: {fileID: 1000014098535420, guid: 01345b03cfe6c634da7d63e9c06c488a, type: 2}
@@ -156,6 +157,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 1000013324434584, guid: 4d2a25e3b3aebb54bb7bd1f1d2a8dcaf, type: 2}
+--- !u!114 &114000013132640632
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010717139190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a53a11e2137386143bf28fd5ec1c41e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000013549303336
 MonoBehaviour:
   m_ObjectHideFlags: 1
