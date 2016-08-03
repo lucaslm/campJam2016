@@ -1,15 +1,17 @@
 fileFormatVersion: 2
-guid: 63a0e030d0ab4604487a0aa23c45ea62
-timeCreated: 1469991845
+guid: 8e41c1387ae43ed4d9d488a3afa5d02f
+timeCreated: 1470195587
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Heyyeahyeh_0
-    21300002: Heyyeahyeh_1
-    21300004: Heyyeahyeh_2
-    21300006: Heyyeahyeh_3
-    21300008: Heyyeahyeh_4
-    21300010: Heyyeahyeh_5
+    21300000: Astronaut-drive_0
+    21300002: Astronaut-drive_1
+    21300004: character-sprite-sheet_2
+    21300006: Astronaut-drive_3
+    21300008: Astronaut-drive_4
+    21300010: Astronaut-drive_5
+    21300012: Astronaut-drive_6
+    21300014: Astronaut-drive_7
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -29,7 +31,7 @@ TextureImporter:
   grayScaleToAlpha: 0
   generateCubemap: 0
   cubemapConvolution: 0
-  cubemapConvolutionSteps: 7
+  cubemapConvolutionSteps: 8
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -1
@@ -59,83 +61,109 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Heyyeahyeh_0
+      name: Astronaut-drive_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 256
-        width: 256
-        height: 256
+        y: 128
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: 0
+      tessellationDetail: -1
     - serializedVersion: 2
-      name: Heyyeahyeh_1
+      name: Astronaut-drive_1
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: character-sprite-sheet_2
       rect:
         serializedVersion: 2
         x: 256
-        y: 256
-        width: 256
-        height: 256
+        y: 128
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: 0
+      tessellationDetail: -1
     - serializedVersion: 2
-      name: Heyyeahyeh_2
+      name: Astronaut-drive_3
       rect:
         serializedVersion: 2
-        x: 512
-        y: 256
-        width: 256
-        height: 256
+        x: 384
+        y: 128
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: 0
+      tessellationDetail: -1
     - serializedVersion: 2
-      name: Heyyeahyeh_3
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 256
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Heyyeahyeh_4
+      name: Astronaut-drive_4
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 256
-        height: 256
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: 0
+      tessellationDetail: -1
     - serializedVersion: 2
-      name: Heyyeahyeh_5
+      name: Astronaut-drive_5
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Astronaut-drive_6
       rect:
         serializedVersion: 2
         x: 256
         y: 0
-        width: 256
-        height: 256
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: 0
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Astronaut-drive_7
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
     outline: []
   spritePackingTag: 
   userData: 

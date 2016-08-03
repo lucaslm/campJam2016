@@ -18,7 +18,7 @@ public class Boss : MonoBehaviour {
 		foreach (AnimationClip clip in bossAnimator.runtimeAnimatorController.animationClips) {
 			print(clip.name);
 			// TODO: Find out how to change animation clip name from dsd to BossDiyng on scene
-			if (clip.name == "BossDiyng" || clip.name == "dsd") {
+			if (clip.name == "EnemyBossAnimationDying") {
 				deathAnimation = clip;
 			}
 		}
