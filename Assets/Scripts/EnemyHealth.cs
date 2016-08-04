@@ -47,7 +47,7 @@ public class EnemyHealth : MonoBehaviour {
 				break;
 			case "EnemyDynamic":
 				healthPoints--;
-				if (healthPoints <=0)
+				if (healthPoints <= 0)
 				{
 					Destroy (gameObject);
 					effect = Instantiate (sound, new Vector3 (0, 0, 0), Quaternion.identity) as GameObject;
@@ -56,21 +56,18 @@ public class EnemyHealth : MonoBehaviour {
 				}
 				break;
 			case "EnemyBoss":
-				// If the boss has been shot, but is not currently already dying, decrease its HP
-				if (!enemyAnimator.GetCurrentAnimatorStateInfo(0).IsName("BossDying")) {
-					healthPoints--;
-					if (healthPoints <= 0) {
-						// Start corrotine to animate its death, and disable colisions so we only play it once
-						gameObject.GetComponent<PolygonCollider2D>().isTrigger = false;
-						StartCoroutine(gameObject.GetComponent<Boss> ().Die());
+				healthPoints--;
+				if (healthPoints <= 0) {
 
-						effect = Instantiate (sound, new Vector3 (0, 0, 0), Quaternion.identity) as GameObject;
-						effect.GetComponent<Songchoice> ().Choice (10);
-						GameObject.Find ("Music(Clone)").GetComponent<Songchoice> ().Song (3, 1); //Victory
+					// Disable colisions so the boss only dies once
+					gameObject.GetComponent<PolygonCollider2D>().enabled = false;
+					enemyAnimator.SetBool("BossDeath", true);
 
+					effect = Instantiate (sound, new Vector3 (0, 0, 0), Quaternion.identity) as GameObject;
+					effect.GetComponent<Songchoice> ().Choice (10);
+					GameObject.Find ("Music(Clone)").GetComponent<Songchoice> ().Song (3, 1); //Victory
 
-						scoreTF.text = (int.Parse (scoreTF.text) + 100).ToString ();
-					}
+					scoreTF.text = (int.Parse (scoreTF.text) + 100).ToString ();
 				}
 				break;
 			}

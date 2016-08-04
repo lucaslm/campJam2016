@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Shoot : MonoBehaviour {
+public class PlayerShoot : MonoBehaviour {
 
 	public GameObject shot;
 	public float cooldown = 1.0f;
@@ -27,8 +27,6 @@ public class Shoot : MonoBehaviour {
 				cantshoot = true;
 			}
 		}
-
-
 
 		//Cooldown
 		time+=Time.deltaTime;

@@ -3,59 +3,34 @@ using System.Collections;
 
 public class Boss : MonoBehaviour {
 
-	Vector3 finalposition;
-	Vector3 bottomposition;
-	public float maxy= 3.5f;
+	public GameObject shot;
+	public float maxy = 3.5f;
+	public float idleTime = 10f;
 	Animator bossAnimator;
-	AnimationClip deathAnimation;
 
 	void Start(){
 
-		finalposition = new Vector3 (transform.position.x, maxy, 0);
-		bottomposition = new Vector3 (transform.position.x, -maxy, 0);
+		bossAnimator = GetComponent <Animator> ();
 
-		bossAnimator = gameObject.GetComponent<Animator>();
-		foreach (AnimationClip clip in bossAnimator.runtimeAnimatorController.animationClips) {
-			print(clip.name);
-			// TODO: Find out how to change animation clip name from dsd to BossDiyng on scene
-			if (clip.name == "EnemyBossAnimationDying") {
-				deathAnimation = clip;
-			}
-		}
+		// On the following lines we pass to the animation controller the objects manipulated on each state
 
-		StartCoroutine (up ());
+		EnemyBossSummonState enemyBossSummonState = bossAnimator.GetBehaviour<EnemyBossSummonState> ();
+		enemyBossSummonState.setMono(this);
+		enemyBossSummonState.setBossObj(gameObject);
+		enemyBossSummonState.setTopPosition(maxy);
+		enemyBossSummonState.setBottomPosition(-maxy);
 
-	}
+		EnemyBossIdleState enemyBossIdleState = bossAnimator.GetBehaviour<EnemyBossIdleState> ();
+		enemyBossIdleState.setMono(this);
+		enemyBossIdleState.setIdleTime(idleTime);
 
-	IEnumerator up(){
-		while (transform.position != finalposition) {
-			transform.position = Vector3.MoveTowards (transform.position, finalposition, Time.deltaTime * 3f);
-			yield return new WaitForSeconds (0.05f);
-		}
-		StartCoroutine (Down ());
+		EnemyBossShootingState enemyBossShootingState = bossAnimator.GetBehaviour<EnemyBossShootingState>();
+		enemyBossShootingState.setShot(shot);
+		enemyBossShootingState.setShotPosition(gameObject.transform.FindChild("EnemyBossShotPosition").gameObject);
+
+		EnemyBossDeathState enemyBossDeathState = bossAnimator.GetBehaviour<EnemyBossDeathState> ();
+		enemyBossDeathState.setBossObj(gameObject);
 
 	}
-
-	IEnumerator Down(){
-		while(transform.position != bottomposition){
-			transform.position = Vector3.MoveTowards (transform.position, bottomposition, Time.deltaTime * 3f);
-			yield return new WaitForSeconds (0.05f);
-		}
-		StartCoroutine (up ());
-
-
-	}
-
-	/*
-	 * Function that triggers animation of boss dying, waits for it to end and destroy the boss' game object
-	 */
-	public IEnumerator Die()
-	{
-		bossAnimator.SetTrigger("BossDeath");
-		yield return new WaitForSeconds(deathAnimation.length);
-		Destroy(gameObject);
-	}
-
-
 
 }

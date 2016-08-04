@@ -11,6 +11,21 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1000014247289902}
   m_IsPrefabParent: 1
+--- !u!1 &1000011502537514
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000013397923114}
+  m_Layer: 0
+  m_Name: EnemyBossShotPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1000014247289902
 GameObject:
   m_ObjectHideFlags: 0
@@ -20,11 +35,11 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000010042909114}
   - 212: {fileID: 212000010559689098}
-  - 50: {fileID: 50000014265845000}
   - 60: {fileID: 60000013347614568}
-  - 95: {fileID: 95000011141490312}
   - 114: {fileID: 114000014226238948}
+  - 95: {fileID: 95000011141490312}
   - 114: {fileID: 114000012322968636}
+  - 50: {fileID: 50000014265845000}
   m_Layer: 0
   m_Name: EnemyBoss
   m_TagString: EnemyBoss
@@ -39,11 +54,25 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000014247289902}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.9, y: 0.41, z: 0}
+  m_LocalPosition: {x: -17.72, y: 0, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
+  m_Children:
+  - {fileID: 4000013397923114}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!4 &4000013397923114
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011502537514}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.16, y: 0.965, z: 0}
+  m_LocalScale: {x: 0.2232703, y: 0.2232703, z: 0.6698109}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 4000010042909114}
   m_RootOrder: 0
 --- !u!50 &50000014265845000
 Rigidbody2D:
@@ -68,7 +97,7 @@ PolygonCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000014247289902}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -170,7 +199,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fca7fc9c7953534eb7cfcab843da78b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shot: {fileID: 1000013690624498, guid: 4ec0e281110b4f544a0050e1164d4a69, type: 2}
   maxy: 3.5
+  idleTime: 10
 --- !u!212 &212000010559689098
 SpriteRenderer:
   m_ObjectHideFlags: 1
