@@ -4,9 +4,9 @@ using System.Collections;
 public class EnemyBoss : MonoBehaviour {
 
 	Animator bossAnimator;
-	public GameObject shot;
 	public float maxy = 3.5f;
 	public float idleTime = 10f;
+	public GameObject shot, sound;
 
 	void Start(){
 
@@ -28,6 +28,7 @@ public class EnemyBoss : MonoBehaviour {
 
 		EnemyBossShootingState enemyBossShootingState = bossAnimator.GetBehaviour<EnemyBossShootingState>();
 		enemyBossShootingState.setShot(shot);
+		enemyBossShootingState.setSound(sound);
 		enemyBossShootingState.setShotPosition(shotPosition);
 
 		EnemyBossDeathState enemyBossDeathState = bossAnimator.GetBehaviour<EnemyBossDeathState> ();
