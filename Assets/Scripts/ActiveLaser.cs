@@ -12,7 +12,7 @@ public class ActiveLaser : MonoBehaviour {
 	void Update () {
 		if(Input.GetKeyDown (KeyCode.R))
 		{
-			anim.SetBool ("Shooting",true);
+			anim.SetBool ("Shooting", true);
 			anim.SetBool ("Lasering", true);
 		}
 	}

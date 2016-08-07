@@ -126,19 +126,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cb307077d502a44390f8e4cb76b3289, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  song1: {fileID: 8300000, guid: da83e44ad5885c34b8ef6fca2bd20232, type: 3}
-  songBoss: {fileID: 8300000, guid: 82a031e663d35aa4aa4f4ceb4388bf89, type: 3}
-  nyan: {fileID: 0}
-  nyansong: {fileID: 8300000, guid: aa6ada96a5bd9c44ea6a085dfbcb0966, type: 3}
-  laserpick: {fileID: 0}
-  hit: {fileID: 0}
-  dead: {fileID: 0}
-  kill: {fileID: 0}
-  lasershot: {fileID: 0}
-  playershot: {fileID: 0}
-  enemyshot: {fileID: 0}
-  bossprojectile: {fileID: 0}
-  bosscharge: {fileID: 0}
-  dieboss: {fileID: 0}
+  levelTheme: {fileID: 8300000, guid: da83e44ad5885c34b8ef6fca2bd20232, type: 3}
+  bossTheme: {fileID: 8300000, guid: 82a031e663d35aa4aa4f4ceb4388bf89, type: 3}
+  nyanSong: {fileID: 8300000, guid: aa6ada96a5bd9c44ea6a085dfbcb0966, type: 3}
   victory: {fileID: 8300000, guid: 24dd6de17732f90469b3a3bb2d5c1e53, type: 3}
   final: {fileID: 8300000, guid: 63d05f70b16ec6349b357409a79f3cf0, type: 3}
+  nyanPick: {fileID: 8300000, guid: 1f0b5f4b75e1db84b88cee356fdc68cf, type: 3}
+  laserPick: {fileID: 8300000, guid: 1f0b5f4b75e1db84b88cee356fdc68cf, type: 3}
+  hit: {fileID: 8300000, guid: ad18ccfb0b4ef2a438a75720dd702500, type: 3}
+  playerDeath: {fileID: 8300000, guid: 5dac649c17debb4449e2a65f081dda92, type: 3}
+  kill: {fileID: 8300000, guid: 2b1d8dd7c3a548e4da5d57e5f30d1404, type: 3}
+  laserShot: {fileID: 8300000, guid: 7ba66e378a4cb7143bb20c2479564a53, type: 3}
+  playerShot: {fileID: 8300000, guid: 9577165016f01404d8ba1e9c3d6f10d1, type: 3}
+  enemyShot: {fileID: 8300000, guid: bff7a9e68b322024a95ad6672041b2eb, type: 3}
+  bossShot: {fileID: 8300000, guid: 0860874bf10fb5e46a576d62bc76ccd0, type: 3}
+  bossCharge: {fileID: 8300000, guid: 715cc1c88e43bfa49a457448bf9e7bd7, type: 3}
+  bossDeath: {fileID: 8300000, guid: 7796b69932ccc6c4babf3a9251d7e63c, type: 3}

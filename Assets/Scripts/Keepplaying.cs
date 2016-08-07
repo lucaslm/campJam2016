@@ -12,4 +12,8 @@ public class Keepplaying : MonoBehaviour {
 			DontDestroyOnLoad (instance);//transform.gameObject);
 		}
 	}
+
+	void Update() {
+		//Debug.Log(instance.GetComponent<AudioSource> ().time);
+	}
 }

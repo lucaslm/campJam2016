@@ -1,65 +1,87 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+public enum SoundEffectCodes {
+	NYAN_PICK,
+	LASER_PICK,
+	HIT,
+	KILL,
+	LASER_SHOT,
+	PLAYER_SHOT,
+	ENEMY_SHOT,
+	BOSS_CHARGE,
+	BOSS_SHOT,
+	BOSS_DEATH,
+	PLAYER_DEATH
+
+};
+
+public enum SongCodes {
+	LEVEL_THEME,
+	BOSS_THEME,
+	NYAN_THEME,
+	VICTORY,
+	FINAL
+}
+
 [RequireComponent(typeof(AudioSource))]
 public class Songchoice : MonoBehaviour {
 
-	public AudioClip song1, songBoss, nyan, nyansong, laserpick, hit, dead, kill, lasershot, playershot, enemyshot;
-	public AudioClip bossprojectile, bosscharge, dieboss, victory, final;
-	private AudioSource audioSrc;
 	float resumeTime;
-
+	AudioSource audioSrc;
+	public AudioClip levelTheme, bossTheme, nyanSong, victory, final;
+	public AudioClip nyanPick, laserPick, hit, playerDeath, kill, laserShot, playerShot, enemyShot, bossShot, bossCharge, bossDeath;
 
 	void Awake(){
 		audioSrc = GetComponent<AudioSource> ();
 	}
 
-	public void Choice(int choice){
+	public void Choice(SoundEffectCodes choice){
 		float dur=1.0f;
 
 		switch (choice) {
-		case 0:
-			audioSrc.clip = nyan;
+		case SoundEffectCodes.NYAN_PICK:
+			audioSrc.clip = nyanPick;
 			dur = 1.0f;
 			break;
-		case 1:
-			audioSrc.clip = laserpick;
+		case SoundEffectCodes.LASER_PICK:
+			audioSrc.clip = laserPick;
 			dur = 1.0f;
 			break;
-		case 2:
+		case SoundEffectCodes.HIT:
 			audioSrc.clip = hit;
 			dur=1.0f;
 			break;
-		case 3:
-			audioSrc.clip = dead;
+		case SoundEffectCodes.PLAYER_DEATH:
+			audioSrc.clip = playerDeath;
 			dur=1.0f;
 			break;
-		case 4:
+		case SoundEffectCodes.KILL:
 			audioSrc.clip = kill;
 			dur = 3.0f;
 			break;
-		case 5:
-			audioSrc.clip = lasershot;
+		case SoundEffectCodes.LASER_SHOT:
+			audioSrc.clip = laserShot;
 			dur = 7.0f;
 			break;
-		case 6:
-			audioSrc.clip = playershot;
+		case SoundEffectCodes.PLAYER_SHOT:
+			audioSrc.clip = playerShot;
 			dur = 1.0f;
 			break;
-		case 7:
-			audioSrc.clip = enemyshot;
+		case SoundEffectCodes.ENEMY_SHOT:
+			audioSrc.clip = enemyShot;
 			dur = 1.0f;
 			break;
-		case 8:
-			audioSrc.clip = bosscharge;
+		case SoundEffectCodes.BOSS_CHARGE:
+			audioSrc.clip = bossCharge;
 			dur = 1.0f;
 			break;
-		case 9:
-			audioSrc.clip = bossprojectile;
+		case SoundEffectCodes.BOSS_SHOT:
+			audioSrc.clip = bossShot;
 			dur = 1.0f;
 			break;
-		case 10:
-			audioSrc.clip = dieboss;
+		case SoundEffectCodes.BOSS_DEATH:
+			audioSrc.clip = bossDeath;
 			dur = 6.0f;
 			break;
 		
@@ -68,36 +90,38 @@ public class Songchoice : MonoBehaviour {
 		StartCoroutine (cutsound(dur));
 	}
 
-
-
 	IEnumerator cutsound(float dur){
 		yield return new WaitForSeconds (dur);
 		Destroy (gameObject);
 		Destroy (this);
 	}
 
-	public void Song(int music, float duration){
+	public void Song(SongCodes music, float advancement = 0) {
 		switch (music) {
-		case 0:
-			audioSrc.clip = song1;
+		case SongCodes.LEVEL_THEME:
+			audioSrc.clip = levelTheme;
+			resumeTime += advancement;
+			if (resumeTime > audioSrc.clip.length) {
+				resumeTime -= Mathf.Floor(resumeTime/audioSrc.clip.length);
+			}
 			audioSrc.time = resumeTime;
 			break;
-		case 1:
-			audioSrc.clip = songBoss;
+		case SongCodes.BOSS_THEME:
+			audioSrc.clip = bossTheme;
 			break;
-		case 2:
-			resumeTime = audioSrc.time+duration;
-			audioSrc.clip = nyansong;
+		case SongCodes.NYAN_THEME:
+			resumeTime = audioSrc.time;
+			audioSrc.clip = nyanSong;
 			break;
-		case 3:
+		case SongCodes.VICTORY:
 			audioSrc.clip = victory;
 			audioSrc.loop = false;
 			break;
-		case 4:
+		case SongCodes.FINAL:
 			audioSrc.clip = final;
 			break;
 		}
-			audioSrc.Play ();
+		audioSrc.Play ();
 	}
 
 }

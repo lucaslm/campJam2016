@@ -30,7 +30,7 @@ public class EnemyBossSummonState : StateMachineBehaviour {
 		mono.StartCoroutine (up ());
 	}
 
-	public IEnumerator up(){
+	IEnumerator up(){
 		while (bossObj.transform.position != topPosition) {
 			bossObj.transform.position = Vector3.MoveTowards (bossObj.transform.position, topPosition, Time.deltaTime * 3f);
 			yield return new WaitForSeconds (0.05f);
@@ -38,7 +38,7 @@ public class EnemyBossSummonState : StateMachineBehaviour {
 		mono.StartCoroutine (Down ());
 	}
 
-	public IEnumerator Down(){
+	IEnumerator Down(){
 		while (bossObj.transform.position != bottomPosition){
 			bossObj.transform.position = Vector3.MoveTowards (bossObj.transform.position, bottomPosition, Time.deltaTime * 3f);
 			yield return new WaitForSeconds (0.05f);

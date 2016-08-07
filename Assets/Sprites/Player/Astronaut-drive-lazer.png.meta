@@ -1,19 +1,17 @@
 fileFormatVersion: 2
-guid: 00de895176dd3ec4885108f3dd573aa8
-timeCreated: 1470438487
+guid: 9581ff10545463449b3762752914c695
+timeCreated: 1470351086
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Lazer-beam_0
-    21300002: Lazer-beam_1
-    21300004: Lazer-beam_2
-    21300006: Lazer-beam_3
-    21300008: Lazer-beam_4
-    21300010: Lazer-beam_5
-    21300012: Lazer-beam_6
-    21300014: Lazer-beam_7
-    21300016: Lazer-beam_8
-    21300018: Lazer-beam_9
+    21300000: Astronaut-drive-lazer_0
+    21300002: Astronaut-drive-lazer_1
+    21300004: Astronaut-drive-lazer_2
+    21300006: Astronaut-drive-lazer_3
+    21300008: Astronaut-drive-lazer_4
+    21300010: Astronaut-drive-lazer_5
+    21300012: Astronaut-drive-lazer_6
+    21300014: Astronaut-drive-lazer_7
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -63,132 +61,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Lazer-beam_0
+      name: Astronaut-drive-lazer_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 768
-        width: 256
-        height: 256
+        y: 128
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Lazer-beam_1
+      name: Astronaut-drive-lazer_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Astronaut-drive-lazer_2
       rect:
         serializedVersion: 2
         x: 256
-        y: 768
-        width: 256
-        height: 256
+        y: 128
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Lazer-beam_2
+      name: Astronaut-drive-lazer_3
       rect:
         serializedVersion: 2
-        x: 512
-        y: 768
-        width: 256
-        height: 256
+        x: 384
+        y: 128
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Lazer-beam_3
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 768
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Lazer-beam_4
+      name: Astronaut-drive-lazer_4
       rect:
         serializedVersion: 2
         x: 0
-        y: 512
-        width: 256
-        height: 256
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Lazer-beam_5
+      name: Astronaut-drive-lazer_5
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Astronaut-drive-lazer_6
       rect:
         serializedVersion: 2
         x: 256
-        y: 512
-        width: 256
-        height: 256
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Lazer-beam_6
+      name: Astronaut-drive-lazer_7
       rect:
         serializedVersion: 2
-        x: 512
-        y: 512
-        width: 256
-        height: 256
+        x: 384
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Lazer-beam_7
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 512
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Lazer-beam_8
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 256
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Lazer-beam_9
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 256
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0

@@ -4,7 +4,7 @@ using System.Collections;
 public class EnemyBossShootingState : StateMachineBehaviour {
 
 	GameObject shot;
-	GameObject  shotPosition;
+	GameObject shotPosition;
 
 	public void setShot(GameObject shot) {
 		this.shot = shot;

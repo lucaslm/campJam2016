@@ -7,25 +7,21 @@ public class Powerup : MonoBehaviour {
 	public GameObject sound;
 	GameObject effect;
 
-	void Awake()
-	{
-		//playerhealth = GetComponent<PlayerHealth> ();
-
-	}
-
 	void OnTriggerEnter2D (Collider2D other){
 
 		if (other.tag == "Player") {
 			effect = Instantiate (sound, new Vector3 (0, 0, 0), Quaternion.identity) as GameObject;
 			if (gameObject.tag == "Nyan") {
-				
-				effect.GetComponent<Songchoice> ().Choice (0);
-				other.gameObject.GetComponent<PlayerHealth> ().setInvincible ();
+
+				effect.GetComponent<Songchoice> ().Choice (SoundEffectCodes.NYAN_PICK);
+				other.gameObject.GetComponent<Animator>().SetBool("invincible", true);
+				GameObject.Find ("Music(Clone)").GetComponent<Songchoice> ().Song(SongCodes.NYAN_THEME);
 
 			}
-			else if (gameObject.tag == "Laser") { //Laser.
-				other.gameObject.GetComponent<PlayerHealth> ().setLaserOn ();
-				effect.GetComponent<Songchoice> ().Choice (1);
+			else if (gameObject.tag == "Laser") {
+
+				effect.GetComponent<Songchoice> ().Choice (SoundEffectCodes.LASER_PICK);
+				other.gameObject.GetComponent<Animator>().SetTrigger("LaserLoad");
 
 			}
 
