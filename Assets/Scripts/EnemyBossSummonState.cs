@@ -3,31 +3,22 @@ using System.Collections;
 
 public class EnemyBossSummonState : StateMachineBehaviour {
 
-	MonoBehaviour mono;
 	GameObject bossObj;
 	Vector3 topPosition;
 	Vector3 bottomPosition;
 
-	public void setBossObj(GameObject bossObj) {
-		this.bossObj = bossObj;
-	}
-
-	public void setMono(MonoBehaviour mono) {
-		this.mono = mono;
-	}
-
-	public void setTopPosition(float topPosition) {
-		this.topPosition = new Vector3 (bossObj.transform.position.x, topPosition, 0);
-	}
-
-	public void setBottomPosition(float bottomPosition) {
-		this.bottomPosition = new Vector3 (bossObj.transform.position.x, bottomPosition, 0);
+	// OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
+	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
+		bossObj = animator.gameObject;
+		float maxy = bossObj.GetComponent<EnemyBoss>().maxy;
+		this.topPosition = new Vector3 (bossObj.transform.position.x, maxy, 0);
+		this.bottomPosition = new Vector3 (bossObj.transform.position.x, -maxy, 0);
 	}
 
 	// OnStateExit is called when a transition ends and the state machine finishes evaluating this state
 	override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-		bossObj.GetComponent<PolygonCollider2D>().enabled = true;
-		mono.StartCoroutine (up ());
+		animator.gameObject.GetComponent<PolygonCollider2D>().enabled = true;
+		animator.gameObject.GetComponent<EnemyBoss>().StartCoroutine (up ());
 	}
 
 	IEnumerator up(){
@@ -35,7 +26,7 @@ public class EnemyBossSummonState : StateMachineBehaviour {
 			bossObj.transform.position = Vector3.MoveTowards (bossObj.transform.position, topPosition, Time.deltaTime * 3f);
 			yield return new WaitForSeconds (0.05f);
 		}
-		mono.StartCoroutine (Down ());
+		bossObj.GetComponent<EnemyBoss>().StartCoroutine (Down ());
 	}
 
 	IEnumerator Down(){
@@ -43,7 +34,7 @@ public class EnemyBossSummonState : StateMachineBehaviour {
 			bossObj.transform.position = Vector3.MoveTowards (bossObj.transform.position, bottomPosition, Time.deltaTime * 3f);
 			yield return new WaitForSeconds (0.05f);
 		}
-		mono.StartCoroutine (up ());
+		bossObj.GetComponent<EnemyBoss>().StartCoroutine (up ());
 	}
 
 }

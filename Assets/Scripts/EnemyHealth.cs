@@ -27,10 +27,20 @@ public class EnemyHealth : MonoBehaviour {
 			case "EnemyShooter":
 				healthPoints--;
 				if (healthPoints <= 0) {
-					Destroy (gameObject);
+
+					// Disable colisions so the enemy only dies once
+					gameObject.GetComponent<PolygonCollider2D>().enabled = false;
+
+					// Enemy stops moving when is dying
+					gameObject.GetComponent<EnemyMovement>().acceleration = 0;
+
 					effect = Instantiate (sound, new Vector3 (0, 0, 0), Quaternion.identity) as GameObject;
 					effect.GetComponent<Songchoice> ().Choice (SoundEffectCodes.KILL);
+
+					enemyAnimator.SetBool("EnemyShooterDead", true);
+
 					scoreTF.text = (int.Parse (scoreTF.text) + 3).ToString ();
+
 				}
 				break;
 			case "EnemyStatic":
