@@ -581,6 +581,41 @@ Prefab:
       propertyPath: m_RootOrder
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 212000013809813308, guid: 6a9d1b2903f0211418da17b88d5dfdc1,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 95000013432455818, guid: 6a9d1b2903f0211418da17b88d5dfdc1,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 60000010435618580, guid: 6a9d1b2903f0211418da17b88d5dfdc1,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013549303336, guid: 6a9d1b2903f0211418da17b88d5dfdc1,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011110977532, guid: 6a9d1b2903f0211418da17b88d5dfdc1,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010700144778, guid: 6a9d1b2903f0211418da17b88d5dfdc1,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011110977532, guid: 6a9d1b2903f0211418da17b88d5dfdc1,
+        type: 2}
+      propertyPath: idleTime
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6a9d1b2903f0211418da17b88d5dfdc1, type: 2}
   m_IsPrefabParent: 0
