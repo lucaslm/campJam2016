@@ -21,7 +21,8 @@ GameObject:
   - 4: {fileID: 4000013405719548}
   - 212: {fileID: 212000013223838456}
   - 95: {fileID: 95000012121834442}
-  - 61: {fileID: 61000012300008224}
+  - 114: {fileID: 114000013164625576}
+  - 61: {fileID: 61000011870634894}
   m_Layer: 0
   m_Name: LaserBeamRepeat
   m_TagString: Laser
@@ -36,13 +37,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012361929780}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.5019994, y: 0.3345, z: 0}
+  m_LocalPosition: {x: -3.461, y: 0.3275, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!61 &61000012300008224
+--- !u!61 &61000011870634894
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -53,9 +54,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 1.3, y: 0}
+  m_Offset: {x: 1.18, y: 0}
   serializedVersion: 2
-  m_Size: {x: 2.5599997, y: 1.7}
+  m_Size: {x: 2.36, y: 1.67}
 --- !u!95 &95000012121834442
 Animator:
   serializedVersion: 3
@@ -73,6 +74,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114000013164625576
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012361929780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d67329492d730a6409adb22b8fe046f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212000013223838456
 SpriteRenderer:
   m_ObjectHideFlags: 1

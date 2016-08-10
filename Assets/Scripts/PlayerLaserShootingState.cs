@@ -5,7 +5,7 @@ public class PlayerLaserShootingState : StateMachineBehaviour {
 
 	MonoBehaviour mono;
 	float laserDuration;
-	GameObject player, laser, laserRepeat, laserPosition, laserInstance;
+	GameObject player, laser, laserRepeat, laserInstance, laserPosition;
 
 	public void setMono(MonoBehaviour mono) {
 		this.mono = mono;
@@ -23,12 +23,12 @@ public class PlayerLaserShootingState : StateMachineBehaviour {
 		this.laserRepeat = laserRepeat;
 	}
 
-	public void setLaserDuration(float laserDuration) {
-		this.laserDuration = laserDuration;
-	}
-
 	public void setLaserPosition(GameObject laserPosition) {
 		this.laserPosition = laserPosition;
+	}
+
+	public void setLaserDuration(float laserDuration) {
+		this.laserDuration = laserDuration;
 	}
 
 	 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
@@ -39,7 +39,6 @@ public class PlayerLaserShootingState : StateMachineBehaviour {
 		LaserBeamShootingState laserBeamShootingState = laserAnimator.GetBehaviour<LaserBeamShootingState>();
 		laserBeamShootingState.setLaser(laserInstance);
 		laserBeamShootingState.setLaserRepeat(laserRepeat);
-		laserBeamShootingState.setLaserRepeatPosition(laserInstance.transform.FindChild("LaserBeamRepeatPosition").gameObject);
 		mono.StartCoroutine (triggerLaserDone (animator));
 	}
 

@@ -3,28 +3,20 @@ using System.Collections;
 
 public class LaserBeamGrowth : MonoBehaviour {
 
-	Vector3 finalSize;
-	Animator laserAnimator;
-	GameObject laserRepeat;
+	SpriteRenderer laserRepeatRenderer;
 
 	void Start () {
-		laserRepeat = gameObject.transform.FindChild("LaserBeamRepeat").gameObject;
-		laserAnimator = GetComponent <Animator> ();
-		finalSize = new Vector3 (1, 1, 1);
-		Debug.Log("OK");
-		StartCoroutine (GrowLaser ());
+		laserRepeatRenderer = GetComponent<SpriteRenderer>();
 	}
 
-	public IEnumerator GrowLaser() {
-		Debug.Log("Should Grow");
-		Debug.Log(laserRepeat.transform.localScale != finalSize); //yields true
-		Debug.Log(laserAnimator.GetCurrentAnimatorStateInfo(0).IsName("LaserBeamShooting")); //yields false
-		while (laserRepeat.transform.localScale != finalSize && laserAnimator.GetCurrentAnimatorStateInfo(0).IsName("LaserBeamShooting")) {
-			Debug.Log("Growing");
-			laserRepeat.transform.localScale = Vector3.MoveTowards (laserRepeat.transform.localScale, finalSize, Time.deltaTime * 18f);
+	// Update is called once per frame
+	void Update () {
+
+		float screenBound = Camera.main.ViewportToWorldPoint(new Vector3 (1, 1, 0)).x;
+		if (laserRepeatRenderer.bounds.max.x < screenBound) {
+			float scaleIncrease = (screenBound - laserRepeatRenderer.bounds.max.x)/laserRepeatRenderer.bounds.size.x;
+			gameObject.transform.localScale += new Vector3(scaleIncrease, 0, 0);
 		}
-		yield return new WaitForSeconds (0.0001f);
 	}
-
 
 }

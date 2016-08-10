@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: d55e025d174bf02489693e96041ec62f
-timeCreated: 1470442265
+timeCreated: 1470785750
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -62,78 +62,78 @@ TextureImporter:
       name: Heyyeahyeh_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 256
-        width: 256
-        height: 256
+        x: 4
+        y: 299
+        width: 235
+        height: 167
       alignment: 4
       pivot: {x: 0, y: 0.5}
-      border: {x: 4, y: 0, z: 17, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: Heyyeahyeh_1
       rect:
         serializedVersion: 2
-        x: 256
-        y: 256
-        width: 256
-        height: 256
+        x: 260
+        y: 299
+        width: 235
+        height: 167
       alignment: 4
       pivot: {x: 0, y: 0.5}
-      border: {x: 4, y: 0, z: 17, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: Heyyeahyeh_2
       rect:
         serializedVersion: 2
-        x: 512
-        y: 256
-        width: 256
-        height: 256
+        x: 516
+        y: 299
+        width: 235
+        height: 167
       alignment: 4
       pivot: {x: 0, y: 0.5}
-      border: {x: 4, y: 0, z: 17, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: Heyyeahyeh_3
       rect:
         serializedVersion: 2
-        x: 768
-        y: 256
-        width: 256
-        height: 256
+        x: 772
+        y: 299
+        width: 235
+        height: 167
       alignment: 4
       pivot: {x: 0, y: 0.5}
-      border: {x: 4, y: 0, z: 17, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: Heyyeahyeh_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 256
-        height: 256
+        x: 4
+        y: 43
+        width: 235
+        height: 167
       alignment: 4
       pivot: {x: 0, y: 0.5}
-      border: {x: 4, y: 0, z: 17, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: Heyyeahyeh_5
       rect:
         serializedVersion: 2
-        x: 256
-        y: 0
-        width: 256
-        height: 256
+        x: 263
+        y: 44
+        width: 235
+        height: 167
       alignment: 4
       pivot: {x: 0, y: 0.5}
-      border: {x: 4, y: 0, z: 17, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     outline: []
