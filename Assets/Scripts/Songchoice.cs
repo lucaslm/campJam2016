@@ -32,6 +32,7 @@ public class Songchoice : MonoBehaviour {
 	AudioSource audioSrc;
 	public AudioClip levelTheme, bossTheme, nyanSong, victory, final;
 	public AudioClip nyanPick, laserPick, hit, playerDeath, kill, laserShot, playerShot, enemyShot, bossShot, bossCharge, bossDeath;
+	bool boss;
 
 	void Awake(){
 		audioSrc = GetComponent<AudioSource> ();
@@ -100,8 +101,12 @@ public class Songchoice : MonoBehaviour {
 		audioSrc.volume = 1.0f;
 		Destroy (gameObject);
 		Destroy (this);
-		if (audioSrc.clip == playerDeath)
+		if (audioSrc.clip == playerDeath) {
+			boss = GameObject.Find ("GameManager").GetComponent<Spawner> ().boss;
+			if (boss)
+				GameObject.Find ("Music(Clone)").GetComponent<Songchoice> ().Song(SongCodes.LEVEL_THEME);
 			SceneManager.LoadScene ("main");
+		}
 	}
 
 	public void Song(SongCodes music, float advancement = 0) {

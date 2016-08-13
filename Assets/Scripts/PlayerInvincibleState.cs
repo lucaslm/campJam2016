@@ -4,6 +4,8 @@ using System.Collections;
 public class PlayerInvincibleState : StateMachineBehaviour {
 
 	MonoBehaviour mono;
+	bool boss = false;
+
 	float startTime, elapsedTime, invincibilityDuration;
 
 	public void setInvincibilityDuration(float invincibilityDuration) {
@@ -34,7 +36,12 @@ public class PlayerInvincibleState : StateMachineBehaviour {
 		// elapsedTime will be greater than invincibilityDuration
 		// TODO: Sometimes it is the boss theme playing, not the normal theme.
 		// We should store the previous sound to know which one to resume
-		GameObject.Find ("Music(Clone)").GetComponent<Songchoice> ().Song (SongCodes.LEVEL_THEME, elapsedTime);
+		// Fixed (not the best solution).
+		boss = GameObject.Find ("GameManager").GetComponent<Spawner> ().boss;
+		if (boss == true)
+			GameObject.Find ("Music(Clone)").GetComponent<Songchoice> ().Song (SongCodes.BOSS_THEME);
+		else
+			GameObject.Find ("Music(Clone)").GetComponent<Songchoice> ().Song (SongCodes.LEVEL_THEME, elapsedTime);
 	}
 
 	IEnumerator exitState(Animator animator){
