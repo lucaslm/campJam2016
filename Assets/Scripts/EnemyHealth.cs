@@ -61,6 +61,8 @@ public class EnemyHealth : MonoBehaviour {
 				healthPoints--;
 				if (healthPoints <= 0) {
 
+					GameObject.Find ("GameManager").GetComponent<Spawner> ().doSpawnShooter = false;
+
 					// Disable colisions so the boss only dies once
 					gameObject.GetComponent<PolygonCollider2D>().enabled = false;
 

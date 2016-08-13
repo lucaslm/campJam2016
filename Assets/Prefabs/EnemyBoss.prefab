@@ -200,7 +200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxy: 3.5
-  idleTime: 10
+  idleTime: 0.001
   shot: {fileID: 1000013690624498, guid: 4ec0e281110b4f544a0050e1164d4a69, type: 2}
   sound: {fileID: 1000014098535420, guid: 01345b03cfe6c634da7d63e9c06c488a, type: 2}
 --- !u!212 &212000010559689098
