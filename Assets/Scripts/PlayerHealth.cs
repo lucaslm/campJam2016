@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour {
 
@@ -31,7 +30,6 @@ public class PlayerHealth : MonoBehaviour {
 				Destroy (gameObject);
 				effect = Instantiate (sound, new Vector3 (0, 0, 0), Quaternion.identity) as GameObject;
 				effect.GetComponent<Songchoice> ().Choice (SoundEffectCodes.PLAYER_DEATH);
-				SceneManager.LoadScene ("main");
 			}
 		}
 	}

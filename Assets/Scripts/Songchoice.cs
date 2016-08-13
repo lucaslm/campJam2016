@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public enum SoundEffectCodes {
 	NYAN_PICK,
@@ -50,14 +51,16 @@ public class Songchoice : MonoBehaviour {
 			break;
 		case SoundEffectCodes.HIT:
 			audioSrc.clip = hit;
+			audioSrc.volume = 0.1f;
 			dur=1.0f;
 			break;
 		case SoundEffectCodes.PLAYER_DEATH:
 			audioSrc.clip = playerDeath;
-			dur=1.0f;
+			dur=1.4f;
 			break;
 		case SoundEffectCodes.KILL:
 			audioSrc.clip = kill;
+			audioSrc.volume = 0.4f;
 			dur = 3.0f;
 			break;
 		case SoundEffectCodes.LASER_SHOT:
@@ -66,10 +69,12 @@ public class Songchoice : MonoBehaviour {
 			break;
 		case SoundEffectCodes.PLAYER_SHOT:
 			audioSrc.clip = playerShot;
+			audioSrc.volume = 0.1f;
 			dur = 1.0f;
 			break;
 		case SoundEffectCodes.ENEMY_SHOT:
 			audioSrc.clip = enemyShot;
+			audioSrc.volume = 0.2f;
 			dur = 1.0f;
 			break;
 		case SoundEffectCodes.BOSS_CHARGE:
@@ -92,8 +97,11 @@ public class Songchoice : MonoBehaviour {
 
 	IEnumerator cutsound(float dur){
 		yield return new WaitForSeconds (dur);
+		audioSrc.volume = 1.0f;
 		Destroy (gameObject);
 		Destroy (this);
+		if (audioSrc.clip == playerDeath)
+			SceneManager.LoadScene ("main");
 	}
 
 	public void Song(SongCodes music, float advancement = 0) {
