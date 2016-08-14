@@ -3,6 +3,29 @@ using System.Collections;
 
 public class LaserBeam : MonoBehaviour {
 
+	Material[] materials;
+	public int index = 0;
+	public GameObject laserRepeat;
+	public Material mat0, mat1, mat2, mat3, mat4, mat5;
+
+	// Use this for initialization
+	void Start () {
+
+		materials = new Material[6];
+		materials[0] = mat0;//(Material)Resources.Load("Materials/Heyyeahyeh0Material.mat");
+		materials[1] = mat1;//(Material)Resources.Load("Materials/Heyyeahyeh1Material.mat");
+		materials[2] = mat2;//(Material)Resources.Load("Materials/Heyyeahyeh2Material.mat");
+		materials[3] = mat3;//(Material)Resources.Load("Materials/Heyyeahyeh3Material.mat");
+		materials[4] = mat4;//(Material)Resources.Load("Materials/Heyyeahyeh4Material.mat");
+		materials[5] = mat5;//(Material)Resources.Load("Materials/Heyyeahyeh5Material.mat");
+
+	}
+
+	void changeMaterial() {
+		laserRepeat.GetComponent<LineRenderer>().material = materials[index];
+		index = (index + 1) % materials.Length;
+	}
+
 	// Update is called once per frame
 	void Update () {
 		// Make laser Follow the player

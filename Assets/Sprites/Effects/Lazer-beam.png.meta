@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 00de895176dd3ec4885108f3dd573aa8
-timeCreated: 1470786362
+timeCreated: 1471099518
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -68,7 +68,7 @@ TextureImporter:
         serializedVersion: 2
         x: 12
         y: 768
-        width: 239
+        width: 240
         height: 256
       alignment: 5
       pivot: {x: 1, y: 0.5}
@@ -79,9 +79,9 @@ TextureImporter:
       name: Lazer-beam_1
       rect:
         serializedVersion: 2
-        x: 268
+        x: 265
         y: 768
-        width: 239
+        width: 240
         height: 256
       alignment: 5
       pivot: {x: 1, y: 0.5}
@@ -92,9 +92,9 @@ TextureImporter:
       name: Lazer-beam_2
       rect:
         serializedVersion: 2
-        x: 530
+        x: 523
         y: 768
-        width: 239
+        width: 240
         height: 256
       alignment: 5
       pivot: {x: 1, y: 0.5}
@@ -105,9 +105,9 @@ TextureImporter:
       name: Lazer-beam_3
       rect:
         serializedVersion: 2
-        x: 780
+        x: 775
         y: 768
-        width: 239
+        width: 245
         height: 256
       alignment: 5
       pivot: {x: 1, y: 0.5}
@@ -120,7 +120,7 @@ TextureImporter:
         serializedVersion: 2
         x: 12
         y: 512
-        width: 239
+        width: 240
         height: 256
       alignment: 5
       pivot: {x: 1, y: 0.5}
@@ -131,9 +131,9 @@ TextureImporter:
       name: Lazer-beam_5
       rect:
         serializedVersion: 2
-        x: 268
+        x: 265
         y: 512
-        width: 239
+        width: 240
         height: 256
       alignment: 5
       pivot: {x: 1, y: 0.5}
@@ -144,9 +144,9 @@ TextureImporter:
       name: Lazer-beam_6
       rect:
         serializedVersion: 2
-        x: 530
-        y: 512
-        width: 239
+        x: 523
+        y: 513
+        width: 240
         height: 256
       alignment: 5
       pivot: {x: 1, y: 0.5}
@@ -157,9 +157,9 @@ TextureImporter:
       name: Lazer-beam_7
       rect:
         serializedVersion: 2
-        x: 780
+        x: 775
         y: 512
-        width: 236
+        width: 245
         height: 256
       alignment: 5
       pivot: {x: 1, y: 0.5}
@@ -172,7 +172,7 @@ TextureImporter:
         serializedVersion: 2
         x: 12
         y: 256
-        width: 239
+        width: 240
         height: 256
       alignment: 5
       pivot: {x: 1, y: 0.5}
@@ -183,9 +183,9 @@ TextureImporter:
       name: Lazer-beam_9
       rect:
         serializedVersion: 2
-        x: 268
+        x: 265
         y: 256
-        width: 239
+        width: 240
         height: 256
       alignment: 5
       pivot: {x: 1, y: 0.5}

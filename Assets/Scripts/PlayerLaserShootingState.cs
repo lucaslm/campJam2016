@@ -36,9 +36,9 @@ public class PlayerLaserShootingState : StateMachineBehaviour {
 		laserInstance          = Instantiate (laser, laserPosition.transform.position, Quaternion.identity) as GameObject;
 		laserInstance.transform.parent = player.transform;
 		Animator laserAnimator = laserInstance.GetComponent<Animator>();
-		LaserBeamShootingState laserBeamShootingState = laserAnimator.GetBehaviour<LaserBeamShootingState>();
-		laserBeamShootingState.setLaser(laserInstance);
-		laserBeamShootingState.setLaserRepeat(laserRepeat);
+		LaserBeamShootingState laserBeamState = laserAnimator.GetBehaviour<LaserBeamShootingState>();
+		laserBeamState.setLaser(laserInstance);
+		laserBeamState.setLaserRepeat(laserRepeat);
 		mono.StartCoroutine (triggerLaserDone (animator));
 	}
 
