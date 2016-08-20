@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour {
 
@@ -17,6 +18,10 @@ public class Player : MonoBehaviour {
 		canShoot = true;
 
 		playerAnimator = GetComponent <Animator> ();
+		playerAnimator.SetBool("PlayerDeath", false);
+
+		gameObject.GetComponent<SpriteRenderer>().enabled = true;
+		gameObject.GetComponent<PolygonCollider2D>().enabled = true;
 
 		shotPosition  = gameObject.transform.FindChild("PlayerShotPosition").gameObject;
 		laserPosition = gameObject.transform.FindChild("PlayerLaserBeamPosition").gameObject;
@@ -65,6 +70,23 @@ public class Player : MonoBehaviour {
 	IEnumerator triggerLaserDone() {
 		yield return new WaitForSeconds (laserDuration);
 		playerAnimator.SetTrigger("LaserDone");
+	}
+
+	// Function called on the event at the end of death animation
+	IEnumerator restartScene() {
+
+		gameObject.GetComponent<SpriteRenderer>().enabled = false;
+		gameObject.GetComponent<PolygonCollider2D>().enabled = false;
+
+		// TODO: make the animation last as much as the sound
+		yield return new WaitForSeconds (0.733f);
+
+		SceneManager.LoadScene ("main");
+
+		bool boss = GameObject.Find ("GameManager").GetComponent<Spawner> ().boss;
+		if (boss)
+			GameObject.Find ("Music(Clone)").GetComponent<Songchoice> ().Song(SongCodes.LEVEL_THEME);
+
 	}
 
 }

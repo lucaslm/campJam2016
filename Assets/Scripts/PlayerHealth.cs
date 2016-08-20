@@ -25,12 +25,13 @@ public class PlayerHealth : MonoBehaviour {
 			if (playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("PlayerInvincible")) {
 				scoreTF.text = (int.Parse (scoreTF.text) + 1).ToString ();
 			}
-			// otherwise he dies
-			else {
-				Destroy (gameObject);
+			// otherwise he dies (if not already dying)
+			else if (!playerAnimator.GetBool("PlayerDeath")) {
+				playerAnimator.SetBool("PlayerDeath", true);
 				effect = Instantiate (sound, new Vector3 (0, 0, 0), Quaternion.identity) as GameObject;
 				effect.GetComponent<Songchoice> ().Choice (SoundEffectCodes.PLAYER_DEATH);
 			}
+
 		}
 	}
 

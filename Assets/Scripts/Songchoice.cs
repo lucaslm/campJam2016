@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEngine.SceneManagement;
 
 public enum SoundEffectCodes {
 	NYAN_PICK,
@@ -101,12 +100,6 @@ public class Songchoice : MonoBehaviour {
 		audioSrc.volume = 1.0f;
 		Destroy (gameObject);
 		Destroy (this);
-		if (audioSrc.clip == playerDeath) {
-			boss = GameObject.Find ("GameManager").GetComponent<Spawner> ().boss;
-			if (boss)
-				GameObject.Find ("Music(Clone)").GetComponent<Songchoice> ().Song(SongCodes.LEVEL_THEME);
-			SceneManager.LoadScene ("main");
-		}
 	}
 
 	public void Song(SongCodes music, float advancement = 0) {
