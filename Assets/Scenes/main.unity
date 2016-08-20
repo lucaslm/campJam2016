@@ -287,20 +287,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 1000014247289902, guid: 194fb507af2c5e44da52df11bdfd0406, type: 2}
-      propertyPath: m_TagString
-      value: EnemyBoss
-      objectReference: {fileID: 0}
-    - target: {fileID: 60000013347614568, guid: 194fb507af2c5e44da52df11bdfd0406,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 212000010559689098, guid: 194fb507af2c5e44da52df11bdfd0406,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 114000014226238948, guid: 194fb507af2c5e44da52df11bdfd0406,
         type: 2}
       propertyPath: m_Enabled
@@ -312,6 +298,11 @@ Prefab:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114000012322968636, guid: 194fb507af2c5e44da52df11bdfd0406,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212000010559689098, guid: 194fb507af2c5e44da52df11bdfd0406,
         type: 2}
       propertyPath: m_Enabled
       value: 0
@@ -565,12 +556,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 212000013809813308, guid: 6a9d1b2903f0211418da17b88d5dfdc1,
+    - target: {fileID: 95000013432455818, guid: 6a9d1b2903f0211418da17b88d5dfdc1,
         type: 2}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 95000013432455818, guid: 6a9d1b2903f0211418da17b88d5dfdc1,
+    - target: {fileID: 212000013809813308, guid: 6a9d1b2903f0211418da17b88d5dfdc1,
         type: 2}
       propertyPath: m_Enabled
       value: 0
@@ -585,11 +576,6 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114000011110977532, guid: 6a9d1b2903f0211418da17b88d5dfdc1,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 114000010700144778, guid: 6a9d1b2903f0211418da17b88d5dfdc1,
         type: 2}
       propertyPath: m_Enabled
@@ -597,8 +583,8 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114000011110977532, guid: 6a9d1b2903f0211418da17b88d5dfdc1,
         type: 2}
-      propertyPath: idleTime
-      value: 1
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6a9d1b2903f0211418da17b88d5dfdc1, type: 2}

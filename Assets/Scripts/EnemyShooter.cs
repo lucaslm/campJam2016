@@ -12,21 +12,6 @@ public class EnemyShooter : MonoBehaviour {
 
 		enemyAnimator = GetComponent<Animator>();
 
-		// new event created
-		AnimationEvent evt = new AnimationEvent();
-
-		// put some parameters on the AnimationEvent
-		evt.intParameter = 12345;
-		evt.time = 1.0f; // nothing to do with idleTime
-		evt.functionName = "SpawnBullet";
-
-		// get the animation clip and add the AnimationEvent
-		foreach (AnimationClip clip in enemyAnimator.runtimeAnimatorController.animationClips) {
-			if (clip.name == "EnemyShooterAnimationShoot") {
-				clip.AddEvent(evt);
-			}
-		}
-
 	}
 		
 	void SpawnBullet () {
@@ -48,4 +33,10 @@ public class EnemyShooter : MonoBehaviour {
 		}
 			
 	}
+
+	// Function called on the event at the end of death animation
+	void destroySelf() {
+		Destroy(gameObject);
+	}
+
 }

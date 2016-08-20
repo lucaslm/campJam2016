@@ -8,7 +8,8 @@ public class EnemyBoss : MonoBehaviour {
 	public float idleTime = 10f;
 	public GameObject shot, sound;
 
-	void Start(){
+	// Use this for initialization
+	void Start() {
 
 		bossAnimator = GetComponent <Animator> ();
 
@@ -17,7 +18,12 @@ public class EnemyBoss : MonoBehaviour {
 		EnemyBossShootingState enemyBossShootingState = bossAnimator.GetBehaviour<EnemyBossShootingState>();
 		enemyBossShootingState.setShotPosition(shotPosition);
 
+	}
 
+	// Function called on the event at the end of death animation
+	void destroySelf() {
+		Destroy(gameObject);
+		GameObject.Find ("Music(Clone)").GetComponent<Songchoice> ().Song (SongCodes.VICTORY);
 	}
 
 }
