@@ -37,65 +37,53 @@ public class Songchoice : MonoBehaviour {
 		audioSrc = GetComponent<AudioSource> ();
 	}
 
-	public void Choice(SoundEffectCodes choice){
-		float dur=1.0f;
+	public void Choice(SoundEffectCodes choice) {
 
 		switch (choice) {
 		case SoundEffectCodes.NYAN_PICK:
 			audioSrc.clip = nyanPick;
-			dur = 1.0f;
 			break;
 		case SoundEffectCodes.LASER_PICK:
 			audioSrc.clip = laserPick;
-			dur = 1.0f;
 			break;
 		case SoundEffectCodes.HIT:
 			audioSrc.clip = hit;
 			audioSrc.volume = 0.1f;
-			dur=1.0f;
 			break;
 		case SoundEffectCodes.PLAYER_DEATH:
 			audioSrc.clip = playerDeath;
-			dur=1.4f;
 			break;
 		case SoundEffectCodes.KILL:
 			audioSrc.clip = kill;
 			audioSrc.volume = 0.4f;
-			dur = 3.0f;
 			break;
 		case SoundEffectCodes.LASER_SHOT:
 			audioSrc.clip = laserShot;
-			dur = 7.0f;
 			break;
 		case SoundEffectCodes.PLAYER_SHOT:
 			audioSrc.clip = playerShot;
 			audioSrc.volume = 0.1f;
-			dur = 1.0f;
 			break;
 		case SoundEffectCodes.ENEMY_SHOT:
 			audioSrc.clip = enemyShot;
 			audioSrc.volume = 0.2f;
-			dur = 1.0f;
 			break;
 		case SoundEffectCodes.BOSS_CHARGE:
 			audioSrc.clip = bossCharge;
-			dur = 1.0f;
 			break;
 		case SoundEffectCodes.BOSS_SHOT:
 			audioSrc.clip = bossShot;
-			dur = 1.0f;
 			break;
 		case SoundEffectCodes.BOSS_DEATH:
 			audioSrc.clip = bossDeath;
-			dur = 6.0f;
 			break;
 		
 		}
 		audioSrc.Play ();
-		StartCoroutine (cutsound(dur));
+		StartCoroutine (cutsound(audioSrc.clip.length));
 	}
 
-	IEnumerator cutsound(float dur){
+	IEnumerator cutsound(float dur) {
 		yield return new WaitForSeconds (dur);
 		audioSrc.volume = 1.0f;
 		Destroy (gameObject);
