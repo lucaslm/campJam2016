@@ -52,7 +52,9 @@ public class Player : MonoBehaviour {
 
 		}
 			
-		if (Input.GetKey (KeyCode.Space) && !playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("PlayerLaserShooting") && canShoot) {
+		if (Input.GetKey (KeyCode.Space) && canShoot &&
+			!playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("PlayerDying") &&
+			!playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("PlayerLaserShooting")) {
 			Instantiate (shot, shotPosition.transform.position, Quaternion.identity);
 			effect = Instantiate (sound, new Vector3 (0, 0, 0), Quaternion.identity) as GameObject;
 			effect.GetComponent<Songchoice> ().Choice (SoundEffectCodes.PLAYER_SHOT);
@@ -60,7 +62,7 @@ public class Player : MonoBehaviour {
 			canShoot = false;
 		}
 
-		//Cooldown
+		// Cooldown
 		time += Time.deltaTime;
 		if (time >= cooldown) {
 			canShoot = true;

@@ -27,9 +27,15 @@ public class PlayerHealth : MonoBehaviour {
 			}
 			// otherwise he dies (if not already dying)
 			else if (!playerAnimator.GetBool("PlayerDeath")) {
+
+				// player stops moving when dying
+				gameObject.GetComponent<PlayerMovement>().enabled = false;
+				gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+
 				playerAnimator.SetBool("PlayerDeath", true);
 				effect = Instantiate (sound, new Vector3 (0, 0, 0), Quaternion.identity) as GameObject;
 				effect.GetComponent<Songchoice> ().Choice (SoundEffectCodes.PLAYER_DEATH);
+
 			}
 
 		}

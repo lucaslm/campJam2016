@@ -32,7 +32,8 @@ public class EnemyHealth : MonoBehaviour {
 					gameObject.GetComponent<PolygonCollider2D>().enabled = false;
 
 					// Enemy stops moving when is dying
-					gameObject.GetComponent<EnemyMovement>().acceleration = 0;
+					gameObject.GetComponent<EnemyMovement>().enabled = false;
+					gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 
 					effect = Instantiate (sound, new Vector3 (0, 0, 0), Quaternion.identity) as GameObject;
 					effect.GetComponent<Songchoice> ().Choice (SoundEffectCodes.KILL);
