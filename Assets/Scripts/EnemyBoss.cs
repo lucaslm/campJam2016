@@ -3,6 +3,7 @@ using System.Collections;
 
 public class EnemyBoss : MonoBehaviour {
 
+	MenuScript menu;
 	Animator bossAnimator;
 	public float maxy = 3.5f;
 	public float idleTime = 10f;
@@ -13,6 +14,8 @@ public class EnemyBoss : MonoBehaviour {
 
 		bossAnimator = GetComponent <Animator> ();
 
+		menu = GameObject.Find("Canvas").GetComponent<MenuScript>();
+
 		GameObject shotPosition = gameObject.transform.FindChild("EnemyBossShotPosition").gameObject;
 
 		EnemyBossShootingState enemyBossShootingState = bossAnimator.GetBehaviour<EnemyBossShootingState>();
@@ -22,8 +25,13 @@ public class EnemyBoss : MonoBehaviour {
 
 	// Function called on the event at the end of death animation
 	void destroySelf() {
+
 		Destroy(gameObject);
-		GameObject.Find ("Music(Clone)").GetComponent<Songchoice> ().Song (SongCodes.VICTORY);
+		Songchoice sc = GameObject.Find ("Music(Clone)").GetComponent<Songchoice> ();
+		sc.Song (SongCodes.VICTORY);
+
+		menu.StartCoroutine("endScreen", sc.victory.length);
+
 	}
 
 }
