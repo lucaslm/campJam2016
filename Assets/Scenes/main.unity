@@ -2514,6 +2514,17 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114000010556580582, guid: ffeb93b17d97f604bbe15b0d8060c710,
+        type: 2}
+      propertyPath: laserRepeat
+      value: 
+      objectReference: {fileID: 1000012361929780, guid: 0dd6fcc3ce3e8a24a90495a679c9b858,
+        type: 2}
+    - target: {fileID: 114000010556580582, guid: ffeb93b17d97f604bbe15b0d8060c710,
+        type: 2}
+      propertyPath: index
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ffeb93b17d97f604bbe15b0d8060c710, type: 2}
   m_IsPrefabParent: 0
