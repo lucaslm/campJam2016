@@ -5,7 +5,6 @@ public class EnemyBoss : MonoBehaviour {
 
 	MenuScript menu;
 	Animator bossAnimator;
-	public float maxy = 3.5f;
 	public float idleTime = 10f;
 	public GameObject shot, sound;
 
