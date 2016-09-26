@@ -5,17 +5,17 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour {
 
 	float time;
-	bool canShoot;
+	bool isShooting;
 	GameObject effect;
 	Animator playerAnimator;
+	PolygonCollider2D playerCollider;
 	public GameObject shot, laser, laserRepeat, sound, shotPosition, laserPosition;
 	public float cooldown = 0.15f, invincibilityDuration = 5.0f, laserDuration = 3.0f;
 
 	// Use this for initialization
 	void Start () {
-	
-		time = 0;
-		canShoot = true;
+
+		isShooting = false;
 
 		playerAnimator = GetComponent <Animator> ();
 		playerAnimator.SetBool("PlayerDeath", false);
@@ -25,7 +25,7 @@ public class Player : MonoBehaviour {
 
 		shotPosition  = gameObject.transform.FindChild("PlayerShotPosition").gameObject;
 		laserPosition = gameObject.transform.FindChild("PlayerLaserBeamPosition").gameObject;
-	
+
 		PlayerInvincibleState playerInvincibleState = playerAnimator.GetBehaviour<PlayerInvincibleState> ();
 		playerInvincibleState.setMono(this);
 		playerInvincibleState.setInvincibilityDuration(invincibilityDuration);
@@ -38,35 +38,75 @@ public class Player : MonoBehaviour {
 		playerLaserShootingState.setLaserPosition(laserPosition);
 		playerLaserShootingState.setLaserDuration(laserDuration);
 
+		playerCollider = GetComponent<PolygonCollider2D>();
+		InvokeRepeating("shootBullet", 0, cooldown);
+
 	}
 
 	// Update is called once per frame
 	void Update () {
 
-		if (Input.GetKeyDown (KeyCode.R) && playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("PlayerLaserReady")) {
-
-			playerAnimator.SetTrigger("LaserShoot");
-
-			effect = Instantiate (sound, new Vector3 (0, 0, 0), Quaternion.identity) as GameObject;
-			effect.GetComponent<Songchoice> ().Choice (SoundEffectCodes.LASER_SHOT);
-
+		if (Input.touchSupported) {
+			if (Input.touchCount > 0) {
+				updatePlayer(Input.GetTouch(0));
+			}
+		} else {
+			updatePlayer();
 		}
-			
-		if (Input.GetKey (KeyCode.Space) && canShoot &&
-			!playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("PlayerDying") &&
+
+	}
+
+	void updatePlayer() {
+		if (playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("PlayerLaserReady") &&
+			Input.GetKeyDown(KeyCode.R)) {
+			shootLaser();
+		}
+		if (!playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("PlayerDying") &&
 			!playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("PlayerLaserShooting")) {
-			Instantiate (shot, shotPosition.transform.position, Quaternion.identity);
-			effect = Instantiate (sound, new Vector3 (0, 0, 0), Quaternion.identity) as GameObject;
-			effect.GetComponent<Songchoice> ().Choice (SoundEffectCodes.PLAYER_SHOT);
-			time = 0;
-			canShoot = false;
+			isShooting = Input.GetKey(KeyCode.Space);
+		} else {
+			isShooting = false;
+		}
+	}
+
+	void updatePlayer(Touch touch) {
+		Debug.Log("touch.tapCount = " + touch.tapCount);
+		var pos = Camera.main.ScreenToWorldPoint(touch.position);
+			pos.z = gameObject.transform.position.z;
+
+		if (!playerCollider.OverlapPoint(pos)) {
+			return;
 		}
 
-		// Cooldown
-		time += Time.deltaTime;
-		if (time >= cooldown) {
-			canShoot = true;
+		if (playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("PlayerLaserReady") &&
+			touch.phase == TouchPhase.Ended &&
+			touch.tapCount == 2) {
+			shootLaser();
 		}
+		if (!playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("PlayerDying") &&
+			!playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("PlayerLaserShooting")) {
+			if (touch.phase == TouchPhase.Ended &&
+				touch.tapCount == 1) {
+				isShooting = !isShooting;
+			}
+
+		} else {
+			isShooting = false;
+		}
+	}
+
+	void shootBullet() {
+		if (isShooting) {
+			Instantiate(shot, shotPosition.transform.position, Quaternion.identity);
+			effect = Instantiate(sound, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
+			effect.GetComponent<Songchoice>().Choice(SoundEffectCodes.PLAYER_SHOT);
+		}
+	}
+
+	void shootLaser() {
+		playerAnimator.SetTrigger("LaserShoot");
+		effect = Instantiate(sound, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
+		effect.GetComponent<Songchoice>().Choice(SoundEffectCodes.LASER_SHOT);
 	}
 
 	IEnumerator triggerLaserDone() {
