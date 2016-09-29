@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour {
 		playerCollider = GetComponent <PolygonCollider2D> ();
 	}
 
+	bool playerTouched;
+
 	// Update is called once per frame
 	void Update () {
 
@@ -19,12 +21,26 @@ public class PlayerMovement : MonoBehaviour {
 		if (Input.touchSupported) {
 
 			if (Input.touchCount > 0) {
+
 				var touch = Input.GetTouch(0);
 				var pos   = Camera.main.ScreenToWorldPoint(touch.position);
 				pos.z     = gameObject.transform.position.z;
 
-				if (!playerCollider.OverlapPoint(pos)) {
-					gameObject.transform.position = Vector3.SmoothDamp(gameObject.transform.position, pos, ref velocity, Time.deltaTime * 20.0f);
+				switch (touch.phase) {
+					case TouchPhase.Began:
+						playerTouched = playerCollider.OverlapPoint(pos);
+						break;
+					case TouchPhase.Moved:
+						if (playerTouched) {
+							gameObject.transform.position = Vector3.SmoothDamp(gameObject.transform.position, pos, ref velocity, Time.deltaTime * 20.0f);
+						}
+						break;
+					case TouchPhase.Ended:
+						if (playerTouched) {
+							gameObject.transform.position = Vector3.SmoothDamp(gameObject.transform.position, pos, ref velocity, Time.deltaTime * 20.0f);
+							playerTouched = false;
+						}
+						break;
 				}
 			}
 

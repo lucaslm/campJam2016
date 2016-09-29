@@ -57,42 +57,55 @@ public class Player : MonoBehaviour {
 	}
 
 	void updatePlayer() {
-		if (playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("PlayerLaserReady") &&
-			Input.GetKeyDown(KeyCode.R)) {
-			shootLaser();
-		}
 		if (!playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("PlayerDying") &&
 			!playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("PlayerLaserShooting")) {
 			isShooting = Input.GetKey(KeyCode.Space);
 		} else {
 			isShooting = false;
 		}
-	}
-
-	void updatePlayer(Touch touch) {
-		Debug.Log("touch.tapCount = " + touch.tapCount);
-		var pos = Camera.main.ScreenToWorldPoint(touch.position);
-			pos.z = gameObject.transform.position.z;
-
-		if (!playerCollider.OverlapPoint(pos)) {
-			return;
-		}
-
 		if (playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("PlayerLaserReady") &&
-			touch.phase == TouchPhase.Ended &&
-			touch.tapCount == 2) {
+			Input.GetKeyDown(KeyCode.R)) {
 			shootLaser();
 		}
+	}
+
+	bool playerTouched = false, playerMoved = false;
+	void updatePlayer(Touch touch) {
+
 		if (!playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("PlayerDying") &&
 			!playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("PlayerLaserShooting")) {
-			if (touch.phase == TouchPhase.Ended &&
-				touch.tapCount == 1) {
+			if (touch.phase == TouchPhase.Ended && touch.tapCount == 1 &&
+				playerTouched && !playerMoved) {
 				isShooting = !isShooting;
 			}
-
 		} else {
 			isShooting = false;
 		}
+
+		if (playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("PlayerLaserReady") &&
+			touch.phase == TouchPhase.Ended && touch.tapCount == 2 &&
+			playerTouched && !playerMoved) {
+			shootLaser();
+		}
+
+		var pos = Camera.main.ScreenToWorldPoint(touch.position);
+		pos.z   = gameObject.transform.position.z;
+
+		switch (touch.phase) {
+			case TouchPhase.Began:
+				playerTouched = playerCollider.OverlapPoint(pos);
+				playerMoved   = false;
+				break;
+			case TouchPhase.Moved:
+				// Allow the finger to move a little, but
+				// not so much as to make the sprite move.
+				playerMoved = playerTouched && (playerMoved || !playerCollider.OverlapPoint(pos));
+				break;
+			case TouchPhase.Ended:
+				playerTouched = playerMoved = false;
+				break;
+		}
+
 	}
 
 	void shootBullet() {
