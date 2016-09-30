@@ -69,6 +69,7 @@ public class Player : MonoBehaviour {
 		}
 	}
 
+	Vector3 initialPos;
 	bool playerTouched = false, playerMoved = false;
 	void updatePlayer(Touch touch) {
 
@@ -94,12 +95,13 @@ public class Player : MonoBehaviour {
 		switch (touch.phase) {
 			case TouchPhase.Began:
 				playerTouched = playerCollider.OverlapPoint(pos);
+				initialPos    = transform.position;
 				playerMoved   = false;
 				break;
 			case TouchPhase.Moved:
 				// Allow the finger to move a little, but
 				// not so much as to make the sprite move.
-				playerMoved = playerTouched && (playerMoved || !playerCollider.OverlapPoint(pos));
+				playerMoved = playerTouched && (playerMoved || transform.position != initialPos);
 				break;
 			case TouchPhase.Ended:
 				playerTouched = playerMoved = false;
