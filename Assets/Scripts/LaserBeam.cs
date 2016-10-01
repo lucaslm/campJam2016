@@ -8,6 +8,8 @@ public class LaserBeam : MonoBehaviour {
 	public GameObject laserRepeat;
 	public Material mat0, mat1, mat2, mat3, mat4, mat5;
 
+	private float rightLimit;
+
 	// Use this for initialization
 	void Start () {
 
@@ -19,6 +21,9 @@ public class LaserBeam : MonoBehaviour {
 		materials[4] = mat4;//(Material)Resources.Load("Materials/Heyyeahyeh4Material.mat");
 		materials[5] = mat5;//(Material)Resources.Load("Materials/Heyyeahyeh5Material.mat");
 
+		Vector3 topRightCorner = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 1));
+		rightLimit  = topRightCorner.x;
+
 	}
 
 	void changeMaterial() {
@@ -28,8 +33,16 @@ public class LaserBeam : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+
 		// Make laser Follow the player
 		GetComponent<Rigidbody2D> ().velocity = transform.parent.GetComponent<Rigidbody2D> ().velocity;
+
+		// Adjust laser repeat size to occupy the entire screen
+		var pos = laserRepeat.transform.position;
+		pos.x   = rightLimit;
+		pos     = laserRepeat.transform.InverseTransformPoint(pos);
+		laserRepeat.GetComponent<LineRenderer>().SetPosition(0, pos);
+
 	}
 	
 	//When collided.
