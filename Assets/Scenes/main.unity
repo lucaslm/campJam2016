@@ -1983,6 +1983,21 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 120000011971777936, guid: 0dd6fcc3ce3e8a24a90495a679c9b858,
+        type: 2}
+      propertyPath: m_Positions.Array.data[0].x
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 120000011971777936, guid: 0dd6fcc3ce3e8a24a90495a679c9b858,
+        type: 2}
+      propertyPath: m_Positions.Array.data[0].y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 120000011971777936, guid: 0dd6fcc3ce3e8a24a90495a679c9b858,
+        type: 2}
+      propertyPath: m_Positions.Array.data[0].z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0dd6fcc3ce3e8a24a90495a679c9b858, type: 2}
   m_IsPrefabParent: 0

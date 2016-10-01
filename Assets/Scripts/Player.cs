@@ -57,37 +57,39 @@ public class Player : MonoBehaviour {
 	}
 
 	void updatePlayer() {
-		if (!playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("PlayerDying") &&
-			!playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("PlayerLaserShooting")) {
-			isShooting = Input.GetKey(KeyCode.Space);
-		} else {
+
+		// If the player gets hit or starts shooting
+		// the laser, them he imediatelly stops shooting.
+		if (playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("PlayerDying") ||
+		    playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("PlayerLaserShooting")) {
 			isShooting = false;
+			return;
 		}
+
+		// Otherwise his actions will depend on the pressed keys
+
+		isShooting = Input.GetKey(KeyCode.Space);
+
 		if (playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("PlayerLaserReady") &&
 			Input.GetKeyDown(KeyCode.R)) {
 			shootLaser();
 		}
+
 	}
 
 	Vector3 initialPos;
 	bool playerTouched = false, playerMoved = false;
 	void updatePlayer(Touch touch) {
 
-		if (!playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("PlayerDying") &&
-			!playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("PlayerLaserShooting")) {
-			if (touch.phase == TouchPhase.Ended && touch.tapCount == 1 &&
-				playerTouched && !playerMoved) {
-				isShooting = !isShooting;
-			}
-		} else {
+		// If the player gets hit or starts shooting
+		// the laser, them he imediatelly stops shooting.
+		if (playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("PlayerDying") ||
+		    playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("PlayerLaserShooting")) {
 			isShooting = false;
+			return;
 		}
 
-		if (playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("PlayerLaserReady") &&
-			touch.phase == TouchPhase.Ended && touch.tapCount == 2 &&
-			playerTouched && !playerMoved) {
-			shootLaser();
-		}
+		// Otherwise his actions will depend on the touch phase and position
 
 		var pos = Camera.main.ScreenToWorldPoint(touch.position);
 		pos.z   = gameObject.transform.position.z;
@@ -95,8 +97,8 @@ public class Player : MonoBehaviour {
 		switch (touch.phase) {
 			case TouchPhase.Began:
 				playerTouched = playerCollider.OverlapPoint(pos);
-				initialPos    = transform.position;
-				playerMoved   = false;
+				initialPos = transform.position;
+				playerMoved = false;
 				break;
 			case TouchPhase.Moved:
 				// Allow the finger to move a little, but
@@ -104,11 +106,26 @@ public class Player : MonoBehaviour {
 				playerMoved = playerTouched && (playerMoved || transform.position != initialPos);
 				break;
 			case TouchPhase.Ended:
+				if (touch.tapCount == 1 && playerTouched && !playerMoved) {
+					isShooting = !isShooting;
+				}
+				if (touch.tapCount == 2 && playerTouched && !playerMoved &&
+					playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("PlayerLaserReady")) {
+					shootLaser();
+				}
 				playerTouched = playerMoved = false;
 				break;
 		}
 
 	}
+
+    // Animation event called on the begining of the player death animation
+    // On some platforms, the update method is never called while this animation
+    // plays. This may cause the player to keep shooting even while he dies.
+    // This event is supposed to fix this problem.
+    void disableShooting() {
+        isShooting = false;
+    }
 
 	void shootBullet() {
 		if (isShooting) {
