@@ -59,6 +59,7 @@ public class Songchoice : MonoBehaviour {
 			break;
 		case SoundEffectCodes.LASER_SHOT:
 			audioSrc.clip = laserShot;
+			audioSrc.volume = 1.4f;
 			break;
 		case SoundEffectCodes.PLAYER_SHOT:
 			audioSrc.clip = playerShot;
